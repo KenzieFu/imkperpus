@@ -1,9 +1,41 @@
+:root{
+    --white:#ffffff;
+    --da2blue:#393E46;
+    --dablue: #222831;
+    --blue:#2e55ba; 
+    --accentblack:#313131;
+    --yellow:#FFD369;
+    --yellow:#FFD369;
+    --addgray:#DBD0C0;
+    --gray:#FAEEE0;
+    --beige:#F9CF93;
+    --lbeige:#FAEEE0;
+
+    --white-light:#ffffff;
+    --blue-light:#2e55ba;
+    --accentblack-light:#313131;
+    --yellow-light:#FFD369;
+    --gray-light:#f4f1f1;
+    --addgray-light:#e3e3e3;
+    --beige-light:#F9CF93;
+    --lbeige-light:#FAEEE0;
+
+    --white-dark:#ffffff;
+    --blue-dark:#2e55ba;
+    --accentblack-dark:#313131;
+    --yellow-dark:#FFD369;
+    --gray-dark:#f4f1f1;
+    --addgray-dark:#e3e3e3;
+    --beige-light:#F9CF93;
+    --lbeige-light:#FAEEE0;
+}
+
 .nav-header{
     font-family:'Inter';
     width:100%;
     margin:auto;
-    padding: 0;
-    background: white;
+    padding: 0.7vw;
+    background: var(--da2blue);
     border: transparent;
     position: sticky;
     top:0;
@@ -56,7 +88,7 @@
 
 .navbar ul .linav a.active{
     text-decoration: none;
-    color:red;
+    color:var(--yellow) !important;
 }
 .navbar ul .linav a{
     text-decoration: none;
@@ -66,9 +98,13 @@
 .linav{
     text-decoration: none;
     cursor: pointer;
-    color: white;
+    color: var(--white);
     transition:  all .3s ease; 
     animation: drop-in 1.5s ease 500ms backwards;
+}
+
+.linav a{
+    color: white !important; 
 }
 
 .linav:hover{
@@ -79,7 +115,7 @@
 
 
 .linav2{
-    color: #2E55BA;
+    color: var(--white);
     cursor: pointer;
     text-decoration: none;
     animation: drop-in 1.5s ease 500ms backwards;
@@ -87,7 +123,7 @@
 }
 
 .linav3{
-    color: #2E55BA;
+    color: var(--white);
     cursor: pointer;
     text-decoration: none;
     animation: drop-in 1.5s ease 500ms backwards;
@@ -100,7 +136,7 @@
 
 .linav3:hover{
     transform:  translateY(-0.3vw);
-    color: #8f2af4;
+    color: var(--yellow);
 }
 
  @keyframes drop-in {

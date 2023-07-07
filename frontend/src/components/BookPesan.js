@@ -64,7 +64,7 @@ export const BookPesan = ({book,rerender}) => {
         <div style={{ marginLeft:"5px", display:"flex",padding:'35px' }}>
             <img sty width="150px" height="210" src={`http://localhost:8080${book.buku.gambar_buku}`} alt="" />
             <div className={classes["book-info"]} id='book-info'>
-                {/* <span className={classes["due-date"]}>{book.pengembalian.status}</span> */}
+               
                 <div style={{ display:"flex",justifyContent:"space-between", alignItems:"center",marginBottom:"0",paddingBottom:"0" }}>
                   <div>
                   <h1 className={classes["book-info_h1"]}>{book.buku.judul_buku}</h1>

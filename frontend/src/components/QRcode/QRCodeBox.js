@@ -8,14 +8,14 @@ export const QRCodeBox = () => {
     <div className={classes.qrcode}>
       {
         value &&
-        <QRCode
+        <QRCode style={{ borderRadius:"20px",padding:"15px" }}
         title="QR Code Anda"
         value={JSON.stringify(value)}
         size={280}/>
       }
         
       <div className={classes.qrtext}>
-        <span><i class="fa fa-caret-up" aria-hidden="true"></i> &nbsp;  Scan untuk masuk perpus &nbsp; <i class="fa fa-caret-up" aria-hidden="true"></i> </span>
+        <span><i class="fa fa-caret-up" aria-hidden="true"></i> &nbsp;  Scan here to enter the Library &nbsp; <i class="fa fa-caret-up" aria-hidden="true"></i> </span>
       </div>  
     </div>
   )

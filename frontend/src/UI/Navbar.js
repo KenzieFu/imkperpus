@@ -53,14 +53,12 @@ const { totalUniqueItems } = useCart()
             <nav className={classes.navbar}>
                 <ul>
                     <li className={classes.linav}><NavLink className={({isActive})=>isActive?classes.active:undefined}/*  style={{textDecoration:"none", color:"#2E55BA"}} */ to={authen?"/student":"/"}>Home</NavLink></li>
-                    <li className={classes.linav}><NavLink className={({isActive})=>isActive?classes.active:undefined}/*  style={{textDecoration:"none", color:"#2E55BA"}} */ to="contactUs">Hubungi</NavLink></li>
-                    <li className={classes.linav}><NavLink className={({isActive})=>isActive?classes.active:undefined}/*  style={{textDecoration:"none", color:"#2E55BA"}} */ to="/library">Perpustakaan</NavLink></li>
-                </ul>
+                    <li className={classes.linav}><NavLink className={({isActive})=>isActive?classes.active:undefined}/*  style={{textDecoration:"none", color:"#2E55BA"}} */ to="contactUs">Contact Us</NavLink></li>                </ul>
                 <div className={classes.divide}>
                     <img src="/assets/logopng.png" className={classes['logo']} alt="" />
                 </div>
                 <ul>
-                   {/*  <li className={classes['linav2']}><NavLink style={{textDecoration:"none", color:"#2E55BA"}} to="/admin">Masuk Admin</NavLink></li> */}
+                <li className={classes.linav}><NavLink className={({isActive})=>isActive?classes.active:undefined}  to="/library">Library</NavLink></li>
                   {!authen &&
                   <li className={classes['linav3']} onClick={props.onClick}>Login
                   </li>}

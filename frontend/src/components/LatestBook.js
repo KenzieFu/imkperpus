@@ -10,7 +10,7 @@ export const LatestBook = ({latest}) => {
 
         <div className={classes.box} style={{ maxWidth:"400px" }}>
 
-                <h1>Baru Dipinjam</h1>
+                <h1>Just Borrowed</h1>
             <img style={{ textAlign:"center",margin:"20px 0" }} src={`http://localhost:8080${latest.buku.gambar_buku}`} width="270px" height="400px" alt="" />
            {/*  <div className={classes.rating}>
             <span className={'fa fa-star '+ classes.checked}></span>
@@ -24,7 +24,7 @@ export const LatestBook = ({latest}) => {
                 <span>{latest.buku.pengarang}</span>
             </div>
             <div className={classes.sinopsis}>
-                <span>Sinopsis</span>
+                <span>Synopsis</span>
                 <p>{latest.buku.sinopsis}</p>
             </div>
 

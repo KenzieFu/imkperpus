@@ -40,14 +40,14 @@ export const StudentChart = (props) => {
                 <nav className={classes.navbar} >
                     <ul style={{ display:"flex",gap:"25px" }}>
                         <li onClick={props.showPinjamHandler} className={currentBarPinjamClassName}>
-                            Dipinjam
+                            Borrowed
                             <span className={barPinjamClassName}></span>
                         </li>
                         <li onClick={props.showKembaliHandler} className={currentBarKembaliClassnName}>
-                            Dikembalikan
+                            Returned
                         <span className={barKembaliClassName}></span></li>
                         <li onClick={props.showBookingHandler} className={currentBarBookingClassnName}>
-                            Dibooking
+                            Booked
                         <span className={barBookingClassName}></span></li>
                     </ul>
                   

@@ -35,15 +35,20 @@ export const Book = ({book}) => {
     <div className={classes["boxes"]}>
     <Box>
         <div style={{ display:"flex",padding:'35px' }}>
-            <img sty width="150px" height="210" src={`http://localhost:8080${book.buku.gambar_buku}`} alt="" />
+        
+        <div className={classes["dueDate-mergeImg"]}>
+        <span className={classes["due-date"]}>{checker}</span>
+        <img sty width="150px" height="210" src={`http://localhost:8080${book.buku.gambar_buku}`} alt="" />
+        </div>
+          
             <div className={classes["book-info"]} id='book-info'>
-                <span className={classes["due-date"]}>{checker}</span>
+                
                 <div style={{ display:"flex",justifyContent:"space-between", alignItems:"center",marginBottom:"0",paddingBottom:"0" }}>
                   <div>
                   <h1 className={classes["book-info_h1"]}>{book.buku.judul_buku}</h1>
                   <p style={{ marginTop:"0",paddingTop:"0"  }}>{book.buku.pengarang}</p>
                   <div style={{ marginTop:"20px"}}>
-                    <p>Tanggal Dipinjam : {book.tanggal_pinjam}</p>
+                    <p>Borrowed : {book.tanggal_pinjam}</p>
                     <p>Deadline         : {book.tanggal_kembali}</p>
                   
                   </div>
