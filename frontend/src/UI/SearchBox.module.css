@@ -1,0 +1,130 @@
+:root{
+    --white:#ffffff;
+    --blue:#2e55ba; 
+    --accentblack:rgb(58, 58, 58);
+    --red:#FF5959;
+    --gray:#f4f1f1;
+
+    --white-light:#ffffff;
+    --blue-light:#2e55ba;
+    --accentblack-light:rgb(58, 58, 58);
+    --red-light:#FF5959;
+    --gray-light:#f4f1f1;
+
+    --white-dark:#ffffff;
+    --blue-dark:#2e55ba;
+    --accentblack-dark:rgb(58, 58, 58);
+    --red-dark:#FF5959;
+    --gray-dark:#f4f1f1;
+}
+
+@media(prefers-color-scheme: dark){
+    :root{
+        --white: var(--white-dark);
+        --blue: var(--blue-dark);
+        --accentblack: var(--accentblack-dark);
+        --red: var(--red-dark);
+        --gray: var(--gray-dark);
+    }
+}
+
+/* 
+
+.search-box{
+    position: relative;
+    transition: all 1s;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid #F1F1F1;
+    padding: 5px;   
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-right: 10px;
+}
+
+
+.search-box input{
+    width: 100%;
+    border:none;
+    outline: none;
+    font-size: 20px;
+    margin:0 5px;
+    padding-left: 10px;
+    background-color: #F1F1F1;
+    transition: all 1s;
+}
+
+.main-button{
+    position: absolute;
+    color:#FF5959;
+    background-color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+/* .search-box:hover,
+.search-box:valid{
+    width: 30%;
+    background-color: white;
+    cursor: pointer;
+}
+
+.search-box:hover input,
+.search-box:valid input{
+    display: block;
+    background: white;
+
+}
+
+.search-box:hover .main-button,
+.search-box:valid .main-button{
+    background: #FF5959;
+    color: white;
+} */ 
+
+.search-box{
+    width: 96%;
+    height: 4vw;
+    margin: auto;
+    margin-top: 1vw;
+    border-radius: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white-light);
+}
+
+.search-box input{
+    width: 100%;
+    height: 100%;
+    border:none;
+    border-radius: 2.22vw;
+    font-size: 1.2vw;
+    outline: none;
+    margin:0 0.74vw;
+    background-color: var(--white-light);
+    padding-left: 1vw;
+}
+
+
+.main-button{
+    background: none;
+    color:var(--red-light);
+    border: none;
+    border-radius: 2.22vw;
+    font-size: 1.5vw;
+    margin: 0.8vw;
+    padding-bottom: 0.3vw;
+    transition: all .3s ease;
+}
+
+.main-button:hover{
+    transform:  translateY(-0.3vw);
+}

@@ -1,0 +1,306 @@
+:root{
+        --white:#ffffff;
+        --blue:#2e55ba; 
+        --accentblack:rgb(58, 58, 58);
+        --red:#FF5959;
+        --addgray:#DBD0C0;
+        --gray:#FAEEE0; 
+        --beige:#F9CF93;
+        --lbeige:#FAEEE0;
+        --green:#4ef441;
+    
+        --white-light:#ffffff;
+        --blue-light:#2e55ba;
+        --blue2-light:#3f87de;
+        --accentblack-light:rgb(58, 58, 58);
+        --red-light:#FF5959;
+        --gray-light:#f4f1f1;
+        --addgray-light:#e3e3e3;
+        --beige-light:#F9CF93;
+        --lbeige-light:#FAEEE0;
+        --green-light: #7ffe73;
+        --grey-new: #F7f7f7;
+    
+    
+        --white-dark:#ffffff;
+        --blue-dark:#2e55ba;
+        --accentblack-dark:rgb(58, 58, 58);
+        --red-dark:#FF5959;
+        --gray-dark:#f4f1f1;
+        --addgray-dark:#e3e3e3;
+        --beige-light:#F9CF93;
+        --lbeige-light:#FAEEE0;
+        --green-dark:#42cf35;
+    
+    }
+    
+    @media(prefers-color-scheme: dark){
+        :root{
+            --white: var(--white-dark);
+            --blue: var(--blue-dark);
+            --accentblack: var(--accentblack-dark);
+            --red: var(--red-dark);
+            --gray: var(--gray-dark);
+        }
+    }
+    
+
+.wajibstar{
+        color: #FF5959;
+}
+
+
+.content {
+        display: flex;
+        margin-top: 20px;
+        display: flex;
+        gap: 25px;
+        background: "#F1F1F1";
+        width:100%;
+
+
+}
+
+.content h3 {
+        color: #00278C;
+        font-family: Inter;
+        font-size: large;
+
+}
+
+.content_inner {
+        margin-left: 20px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+        margin-right: 3px;
+}
+
+
+.card {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        border-style: solid;
+        padding: 0 10px;
+        border-width: 3px;
+        border-radius: 10px;
+        border-color: #D9D9D9;
+        font-family: Inter;
+        color: #00278C;
+        margin-bottom: 10px;
+        padding: 20px;
+}
+
+.error {
+        color: red;
+        font-size: 15px;
+        font-weight: 500;
+        margin-left: 5px;
+}
+
+.error input {
+        background-color: #ffa6a6;
+        border-radius: 10px;
+
+        margin-left: 5px;
+        margin-right: 5px;
+        padding: 4px;
+        margin-top: 6px;
+        margin-bottom: 5px;
+        width: 390px;
+}
+
+.card input {
+        background-color: white;
+        border-radius: 10px;
+        border-style: solid;
+        border-color: #D9D9D9;
+        margin-left: 5px;
+        margin-right: 5px;
+        padding: 4px;
+        margin-top: 6px;
+        margin-bottom: 5px;
+}
+
+.card input[type="date"] {
+        background-color: aliceblue;
+        color: red;
+        width: 110px;
+}
+
+
+
+/* .card input[type="text"], input[type="number"], input[type="email"] {
+        width: 390px;
+} */
+
+.card input[type="checkbox"] {
+        margin-left: 10px;
+}
+
+.card textarea {
+        background-color: white;
+        border-radius: 10px;
+        border-style: solid;
+        border-color: #D9D9D9;
+        margin-left: 5px;
+        margin-right: 5px;
+        padding: 4px;
+        margin-bottom: 5px;
+        width: 390px;
+        height: 100px;
+}
+
+
+
+.block input,
+textarea {
+        display: block;
+}
+
+.row {
+        flex-direction: row;
+}
+
+.button {
+        display: flex;
+        text-align: center;
+        flex-direction: row;
+        justify-content: space-around;
+}
+
+.button button {
+        border-radius: 10px;
+        border: 0;
+        padding: 8px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: 100px;
+        margin-right: 100px;
+}
+
+.button_edit {
+        display: flex;
+        flex-direction: row;
+        float: right;
+}
+
+.button_edit button {
+        border-radius: 10px;
+        border: 0;
+        padding: 8px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: 100px;
+        margin-right: 100px;
+}
+
+.button_edit button:hover {
+        border-radius: 10px;
+        border: 0;
+        padding: 8px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: 100px;
+        margin-right: 100px;
+        color: aliceblue;
+        background-color: darkblue;
+}
+
+/* .button button:hover {
+        border-radius: 10px; 
+        border: 0;
+        padding: 8px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: 100px;
+        margin-right: 100px;
+        color: aliceblue;
+        background-color: darkblue;
+} */
+
+.button button:disabled {
+        border-radius: 10px;
+        border: 0;
+        padding: 8px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: 100px;
+        margin-right: 100px;
+        color: white;
+        background-color: gray;
+}
+
+.submit {
+        background-color: chartreuse;
+        color: black;
+}
+
+/* .reset {
+        background-color: #D9D9D9;
+        color: black;
+} */
+.edit {
+        background-color: #edebeb;
+        color: black;
+}
+/* .cancel {
+        background-color: red;
+        color: black;
+} */
+
+.stepper {
+        display: flex;
+        padding: 24px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+}
+
+.stepper ol {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+}
+
+
+ .cancel1, .cancel, .reset, .submit{
+        font-size: 14px;
+        background-color: var(--white-light);
+        padding: 0.5vw 1.2vw;
+        border-radius: 0.6vw;
+        cursor: pointer;
+        transition: all .3s ease;
+        border-color: var(--white-light);
+    }
+
+    .cancel1, .reset{
+        color: var(--red-light);
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+    
+    .cancel1:hover, .reset:hover{
+        background-color: var(--red-light);
+        color: var(--white-light);
+        transform: translateY(-0.3vw);
+        text-decoration: none;
+        border-color: var(--red-light);
+    }
+
+    .submit, .cancel {
+        color: var(--green-dark);
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+    .submit:hover, .cancel:hover {
+        background-color: var(--green-light);
+        color: var(--white-light);
+        transform: translateY(-0.3vw);
+        text-decoration: none;
+        border-color: var(--green-light);
+    }

@@ -1,0 +1,80 @@
+.maintop{
+
+}
+
+.info{
+    color:#00278C;
+}
+
+.infotop{
+    margin-left: 2vw;
+    margin-top: 2vw;
+}
+
+.info h1, .history h1{
+    font-size: 2vw;
+}
+
+.info span, .navbar li, .navbar span{
+    font-size: 1vw;
+}
+
+.chart{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin:30px 0;
+    
+}
+
+.history{
+    margin-right: 25px;
+    padding-bottom: 20px;
+}
+
+.highlight-line{
+    background: #D9D9D9;
+    margin-top: 5px;
+    height: 3px;
+}
+
+.history h1{
+    color:#00278C;
+    font-size: 1.5vw;
+    font-weight: 700;
+    margin-left: 2vw;
+    line-height: 7vw;
+}
+
+.history .navbar{
+    display: flex;
+    color:#00278C;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    
+}
+
+.history .navbar ul{
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    
+}
+
+.currentBar{
+    display: flex;
+    flex-direction: column;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.not{
+    font-weight: normal;
+    color:"#D9D9D9";
+}
+
+.notBar{
+    display: none;
+}
