@@ -37,6 +37,7 @@
 
 .navbar ul li{
     text-decoration: none;
+   
 }
 
 .navbar ul{
@@ -59,12 +60,13 @@
 }
 .navbar ul .linav a{
     text-decoration: none;
+    
 }
 
 .linav{
     text-decoration: none;
     cursor: pointer;
-    color: #2E55BA;
+    color: white;
     transition:  all .3s ease; 
     animation: drop-in 1.5s ease 500ms backwards;
 }

@@ -93,7 +93,7 @@ const closeCartModal=()=>{
   return (
     <>
     <CartProvider>
-    <div style={{background:"#f4f1f1", minHeight:"100vh" }} className="App">
+    <div style={{background:"#222831", minHeight:"100vh" }} className="App">
           {showLogin &&<LoginModal onClose={closeLoginModal}/>}
           {showCart && <Cart onClose={closeCartModal}/>}
     <Navbar style={{position:"relative"}} onClick={showLoginModal} onClickCart={showCartModal} />

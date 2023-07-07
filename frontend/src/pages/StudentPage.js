@@ -97,14 +97,14 @@ const renderHandler=()=>{
 
         </div>
       </div>
-      <div>
+      <div >
 
         {/*   <StudentCard/> */}
 
         <QRCodeBox />
         <Suspense fallback={<p>Loading...</p>}>
           <Await resolve={pinjam}>
-            {loadedData => <LatestBook latest={loadedData.filter((book, i, { length }) => i === length - 1)} />}
+            {loadedData => <LatestBook latest={loadedData.reduce((a,b)=>a.id_peminjaman>b.id_peminjaman?a:b)} />}
           </Await>
         </Suspense>
       </div>

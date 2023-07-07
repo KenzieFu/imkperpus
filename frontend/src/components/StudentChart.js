@@ -26,7 +26,7 @@ export const StudentChart = (props) => {
             <div className={classes.infotop}>
             <div className={classes.info}>
                 <h1>Halo, {student.username}!</h1>
-                <span>Sudahkah kamu membaca buku hari ini?</span>
+                <span>Have you read any books today?</span>
             </div>
             <div className={classes.chart}>
                 <BookBar image="./assets/bukuPinjam.png" current={countPinjam} max="3" label="Buku Pinjam" color="#FF0000" />
@@ -36,7 +36,7 @@ export const StudentChart = (props) => {
             </div>
             </div>
            <div className={classes.history} >
-            <h1>Riwayat Peminjaman Buku</h1>
+            <h1><span style={{ color:"#FFD369",display:"inline" }}>Borrowed Books</span> History </h1>
                 <nav className={classes.navbar} >
                     <ul style={{ display:"flex",gap:"25px" }}>
                         <li onClick={props.showPinjamHandler} className={currentBarPinjamClassName}>
@@ -50,7 +50,7 @@ export const StudentChart = (props) => {
                             Dibooking
                         <span className={barBookingClassName}></span></li>
                     </ul>
-                    <span style={{ fontWeight:"bolder" }}>Sort By <i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                  
                 </nav>
            </div>
            </div>
