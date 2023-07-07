@@ -1,30 +1,41 @@
 :root{
     --white:#ffffff;
+    --dablue: #222831;
+    --greye: #EEEEEE;
     --blue:#2e55ba; 
-    --accentblack:rgb(58, 58, 58);
-    --red:#FF5959;
-    --gray:#f4f1f1;
+    --accentblack:#313131;
+    --yellow:#FFD369;
+    --yellow:#FFD369;
+    --addgray:#DBD0C0;
+    --gray:#FAEEE0;
+    --beige:#F9CF93;
+    --lbeige:#FAEEE0;
 
     --white-light:#ffffff;
     --blue-light:#2e55ba;
-    --accentblack-light:rgb(58, 58, 58);
-    --red-light:#FF5959;
+    --accentblack-light:#313131;
+    --yellow-light:#FFD369;
     --gray-light:#f4f1f1;
+    --addgray-light:#e3e3e3;
+    --beige-light:#F9CF93;
+    --lbeige-light:#FAEEE0;
 
     --white-dark:#ffffff;
     --blue-dark:#2e55ba;
-    --accentblack-dark:rgb(58, 58, 58);
-    --red-dark:#FF5959;
+    --accentblack-dark:#313131;
+    --yellow-dark:#FFD369;
     --gray-dark:#f4f1f1;
+    --addgray-dark:#e3e3e3;
+    --beige-light:#F9CF93;
+    --lbeige-light:#FAEEE0;
 }
 
-
 .footer{
-    background-color: var(--white-light);
+    background-color: var(--greye);
     font-family: 'Inter';
     padding:1vw 4vw;
     margin-top: 3vw;
-    
+    padding-top: 3vw;
     bottom: 0;
     font-size: 1.2vw;
 }
@@ -47,6 +58,13 @@
     display: flex;
     flex-direction: column;
     width: 30vw;
+    font-size: 1vw;
+}
+
+.left-footer h1{
+    font-size: 1.7vw;
+    color: var(--accentblack);
+    line-height: 3vw;
 }
 
 .img{
@@ -55,13 +73,14 @@
     justify-content: center; 
     align-items: center;
     width: 30vw;
+    margin-top: 2.4vw;
 }
 
 .logo{
     position: absolute;
-    top: -6vw;
+    top: -4vw;
     z-index: 23;
-    width: 9vw;
+    width: 6vw;
 }
 
 .right-footer{
@@ -70,14 +89,31 @@
     justify-content: right;
     padding-left: 8vw;
     width: 30vw;
+    font-size: 1vw;
+}
+
+.right-footer h1{
+    font-size: 1.7vw;
+    line-height: 3vw;
+    color: var(--accentblack);
 }
 
 .hori{
     width: 100%;
     height: 1.48vw;
     border-bottom: 1px solid var(--accentblack-light);
+    align-items: center;
+    display: flex;
     text-align: center;
+    justify-content: center;
 }
+
+.hori h1{
+    font-size: 1.7vw;
+    color: var(--accentblack);
+
+}
+
 
 span{
     display: block;

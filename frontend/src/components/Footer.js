@@ -6,40 +6,35 @@ return (
 
   <div className={classes.main} >
     <div className={classes["left-footer"]}>
-      <h2>Alamat</h2>
-      <span>Komplek CBD. Polonia Blok CC No.108Jl. Padang Golf (dalam)</span>
-      <span>Medan – Sumatera Utara 20157 Indonesia</span>
+      <h1>Address</h1>
+      <span>Arya Duta Hotel, Jl. Kapten Lubis No.8, Petisah Tengah,</span>
+      <span>Medan Petisah, Medan City, North Sumatra 20112</span>
     </div>
 
     <div className={classes.img}>
       <img className={classes.logo} src="./assets/logopng.png" alt="" />
     </div>
     <div className={classes["right-footer"]}>
-      <h2>Kontak kami</h2>
+      <h1>Contact Us</h1>
       <table>
         <tr>
           <td>Email</td>
           <td>&nbsp; : &nbsp;</td>
-          <td>info@methodistcw.sch.id </td>
+          <td>thecrownlibrary@gmail.com </td>
         </tr>
         <tr>
           <td>Phone</td>
           <td> &nbsp; : &nbsp;</td>
-          <td>(061) – 4277 1542</td>
-        </tr>
-        <tr>
-          <td>WhatsApp</td>
-          <td> &nbsp; : &nbsp;</td>
-          <td>0878 6912 3707 </td>
+          <td>(061) – 123 456</td>
         </tr>
       </table>
     </div>
   </div>
 
   <div className={classes.hori}>
-    <h2 style={{ padding:"0 1vw", background:"white",display:"inline" }}>Methodist Charles Wesley</h2>
+    <h1 style={{padding:"0.7vw", paddingLeft:"2vw", paddingRight:"2vw", background:"#EEEEEE",display:"inline" }}>The Crown Library</h1>
   </div>
-  <div style={{ marginTop:"1.8vw", textAlign:"center" }}>Copyright © - Methodist Charles Wesley School</div>
+  <div style={{ fontSize:"1vw", marginTop:"1vw", textAlign:"center" }}>Copyright © - The Crown Library</div>
 
 
 

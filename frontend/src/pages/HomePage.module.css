@@ -547,34 +547,34 @@ ul:after {
 
 .ml-content{
     background-image: url(../../public/assets/Rectangle\ 135.png);
-    background-size: cover;
-    width: 18vw;
+    background-size: contain;
+    width: 16vw;
     border: none;
     background-color: var(--accentblack);
     border-radius: 50px;
-    height: 29vw;
+    height: 25vw;
     transition:  all .3s ease; 
 }
 
 .mf-content{
     background-image: url(../../public/assets/Rectangle\ 136.png);
     background-size: cover;
-    width: 18vw;
+    width: 16vw;
     border: none;
     background-color: var(--accentblack);
     border-radius: 50px;
-    height: 29vw;
+    height: 25vw;
     transition:  all .3s ease; 
 }
 
 .mm-content{
     background-image: url(../../public/assets/Rectangle\ 137.png);
     background-size: cover;
-    width: 18vw;
+    width: 16vw;
     border: none;
     background-color: var(--accentblack);
     border-radius: 50px;
-    height: 29vw;
+    height: 25vw;
     margin-top: 8vw;
     transition:  all .3s ease; 
 }
@@ -582,11 +582,11 @@ ul:after {
 .mr-content{
     background-image: url(../../public/assets/Rectangle\ 138.png);
     background-size: cover;
-    width: 18vw;
+    width: 16vw;
     border: none;
     background-color: var(--accentblack);
     border-radius: 50px;
-    height: 29vw;
+    height: 25vw;
     margin-top: 8vw;
     transition:  all .3s ease; 
 }
