@@ -42,7 +42,7 @@ export const LibraryPage = () => {
       {check &&
           <h1>
             <span> Hasil Pencarian untuk : </span>
-            <span style={{color:'#3a3a3a', marginLeft:'0.4vw', fontWeight:'600'}}>{enteredKey}</span>
+            <span style={{marginLeft:'0.4vw', fontWeight:'600'}}>{enteredKey}</span>
           </h1>
         }
         </div>

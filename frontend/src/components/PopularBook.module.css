@@ -43,7 +43,7 @@
     font-family: 'Inter';
     background: #222831;
 
-    color:var(--accentblack-light) ;
+    color:white;
     width: 100%;   
     padding-bottom: 1.5vw;  
     margin: auto;
@@ -61,6 +61,8 @@
     margin: auto;
     margin-top: 0px;
     overflow-x: auto;
+    color: white;
+    
 }
 
 .popular h1{
@@ -69,11 +71,13 @@
     font-weight: 600;
     margin-top: 1vw;
     margin-bottom: 2vw;
+    color: #FFD369;
 }
 
 .popular .book-detail{
    display: flex;
    flex-direction: column;
+   text-decoration: none;
 }
 
 .book-detail h2{
@@ -81,12 +85,14 @@
     font-weight: 600;
     margin-top: 0.8vw;
     line-height: 2vw;
-    color: var(--accentblack-light);
+    color: #FFD369;
+ 
 }
 
 .book-detail span{
     font-size: 1vw;
-    color: var(--accentblack-light);
+    color: white;
+    
 }
 
 .popular li img{
@@ -120,7 +126,7 @@
 }
 
 .notfound{
-    background-color: var(--white-light);
+    background-color: #222831;
     padding: 1.5vw 0 ;
 }
 

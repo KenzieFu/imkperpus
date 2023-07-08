@@ -87,7 +87,7 @@
 }
 
 .searchsugg span{
-    color: var(--blue-light);
+    color: #FFD369;
     font-size: 1.2vw;
     font-weight: 500;
 }
@@ -95,10 +95,11 @@
 .searchsugg h1{
     display: flex;
     line-height: 1vw;
+    color: #FFD369;
 }
 
 .enteredkey{
-    color: var(--accentblack-light);
+    color: #FFD369;
     font-weight: 500;
     font-size: 1.4vw;
 }
