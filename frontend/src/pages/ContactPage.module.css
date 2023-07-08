@@ -57,7 +57,7 @@
 }
 
 .content-form{
-    background-color: var(--white-light);
+    background-color: #393E46;
     display: flex;
     flex-direction: column;
     width: 51%;
@@ -96,6 +96,7 @@
     align-items: flex-start;
     margin-top: 1.2vw;
     cursor: text;
+   
     animation: drop-in 1s ease 200ms backwards;
 }
 
@@ -107,6 +108,7 @@
     margin-bottom: 0.4vw;
     font-weight: 600;
     font-size: 1vw;
+    color:#FFD369 ;
 }
 
 .content-input ::placeholder{
@@ -116,11 +118,12 @@
 
 .content-input input, textarea{
     width: 35vw;
-    color: var(--accentblack-light);
+    color: white;
     font-size: 1.11vw;
     border-radius: 1vw;
-    border: 1px solid var(--grey-light);
+    border:none;
     padding: 0.8vw;
+    background: #FFD36945;
 }
 
 .kirimbutton{
@@ -153,20 +156,27 @@
 .contactus{
     text-align: left;
     animation: drop-in 1.8s ease 200ms backwards;
+    color: white;
+}
+.contactus h1,.contactus p{
+    color: white;
 }
 
 .main2{
     display: flex;
     width: 100%;
+    justify-content: space-between;
     height: 27vw;
-    background-color: rgb(248, 248, 248);
+    background-color: #FFD369;
     align-items: center;
+    color: black;
 }
 
 .main2con{
     display: block;
     text-align: left;
     width: 30vw;
+    font-weight: bolder;
     padding: 1vw;
     padding-left: 2vw;
 }
@@ -182,30 +192,31 @@
     display: block;
     margin: auto;
     font-size: 1.11vw;
-    color: var(--addgrey-light);
+    
 }
 
 .main2con h1{
     font-size: 2vw;
-    color: var(--accentblack-light);
+  
     font-weight: 600;
     line-height: 5vw;
 }
 
 .main2con2 h2{
     font-size: 1.5vw;
-    color: var(--accentblack-light);
+   
     font-weight: 600;
     line-height: 3vw;
 }
 
 .minilogo{
-    width: 18vw;
-    height: 18vw;
-    background-color: red;
+    width: 20vw;
+    height: 20vw;
+    background-color: #393E46;
     border-radius: 50%;
     margin-top: 2vw;
-    /* background-image: url(../../public/assets/brodedi.jpg); */
+    margin-right: 40px;
+    background-image: url(../../public/assets/crown3.png);
     background-size: cover;
     background-position-x: center;
 }

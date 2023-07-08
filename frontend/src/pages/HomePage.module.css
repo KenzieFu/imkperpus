@@ -72,6 +72,9 @@
 
 .main-button:hover{
     transform:  translateY(-0.3vw);
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
 }
 
 .main-button:active{
@@ -495,6 +498,8 @@ ul:after {
 
 .main-button2:hover{
     transform:  translateY(-0.3vw);
+    color: white;
+    text-decoration: none;
 }
 
 .main-button2:active{

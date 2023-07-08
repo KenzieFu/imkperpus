@@ -50,7 +50,7 @@ const gagal = () => toast.warning('Pesan Gagal Ditambahkan', {
                 {!isAuth && <div></div>}
                         <div className={classes['content-form']}>
                             <div className={classes['contactus']}>
-                            <h1>Hubungi Kami</h1>
+                            <h1>Contact Us</h1>
                             <p>Our friendly team would love to hear from you!</p>
                             </div>
                             <Form id="formpesan" method="POST">
@@ -63,15 +63,15 @@ const gagal = () => toast.warning('Pesan Gagal Ditambahkan', {
                                     <input pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required name="email" type="email" placeholder="nama@mail.com"></input>
                                 </div>
                                 <div className={classes['content-input']}>
-                                    <label htmlFor='no_HP'>Nomor HP/ WhatsApp</label>
+                                    <label htmlFor='no_HP'>Phone Number</label>
                                     <input required name="no_HP" type="number" placeholder="(08)-123456789"></input>
                                 </div>
                                 <div className={classes['content-input']}>
-                                    <label htmlFor='subject'>Subjek</label>
+                                    <label htmlFor='subject'>Subject</label>
                                     <input required name="subjek" type="text" placeholder="Perihal"></input>
                                 </div>
                                 <div className={classes['content-input']}>
-                                    <label htmlFor='pesan'>Pesan</label>
+                                    <label htmlFor='pesan'>Message</label>
                                     <textarea name="pesan" rows="6"></textarea>
                                 </div>
                                 <button type="submit" onClick={(e)=>submitHandler(e)} className={classes['kirimbutton']}>Kirim Pesan</button>
@@ -99,9 +99,9 @@ const gagal = () => toast.warning('Pesan Gagal Ditambahkan', {
                         <span>(061) – 4277 1542</span>
                         <span>0878 6912 3707 (WA)</span>
                         <br></br>
-                        <h2> Lokasi </h2>
+                        {/* <h2> Lokasi </h2>
                         <span> Komplek CBD. Polonia Blok CC No.108Jl. </span>
-                        <span>Padang Golf (dalam) Medan – Sumatera Utara 20157</span>
+                        <span>Padang Golf (dalam) Medan – Sumatera Utara 20157</span> */}
                         </div>
                         <div className={classes['main2con2']}>
                         <div className={classes['minilogo']}></div>

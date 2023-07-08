@@ -44,18 +44,22 @@
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
+    background-color:#222831;
 }
 
 .main{
     width: 100%;
     color: #00278C ;
     font-family: Inter;
+    background: #222831;
+
     
 
 }
 
 .maintop{
-    background-color: var(--gray-light);
+    background: #222831;
+
    /*  height: 80vw; */
     margin-bottom: 5vw;
 }
@@ -63,11 +67,15 @@
 .mainmid{
   
     width: 97%;
+    background: #222831;
+
+
     
 }
 
 .mainbatch{
-    background-color: var(--white-light);
+    background: #222831;
+
     padding-top: 2vw;
     padding-bottom: 2vw;
 }

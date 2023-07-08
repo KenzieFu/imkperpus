@@ -52,12 +52,12 @@ export const HomePage = () => {
                     <span>Medan Petisah, Medan City, North Sumatra 20112</span>
                 </div>
                 </div>
-                <button className={classes["main-button"]}>Get Started</button>
+                <a href='#section' className={classes["main-button"]}>Get Started</a>
             </div>
         </div>
 
 
-        <div className={classes.extrain}>
+        <div id='section' className={classes.extrain}>
         <div className={classes.extran0}>
             <div className={classes['visimisi']}>
                 <span> What is </span>
@@ -68,7 +68,7 @@ export const HomePage = () => {
             The Crown Library are a collection of materials, books or media that are accessible for use and not just for display purposes. The Crown Library serve as community centres, providing social interaction and learning opportunities.
             </div>
             <div className={classes['buttons']}>
-                <button className={classes["main-button2"]}> Learn More </button>
+                <a href='/contactUs'  className={classes["main-button2"]}> Learn More </a>
             </div>
         </div>
 

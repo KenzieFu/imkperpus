@@ -41,7 +41,8 @@
 
 .popular{
     font-family: 'Inter';
-    background-color: var(--addgray-light);
+    background: #222831;
+
     color:var(--accentblack-light) ;
     width: 100%;   
     padding-bottom: 1.5vw;  
