@@ -15,7 +15,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { getUserCredentials } from "../components/util/auth";
 
 const BookDetail = () => {
-
+    console.log("nasiodhalsdhoas")
     const notify = () => toast.success('Buku berhasil ditambahkan ke booking list!', {
         position: "top-center",
         autoClose: 5000,
@@ -130,62 +130,69 @@ const BookDetail = () => {
         navigate("..");
     }
 
+    let handleAddToCart=()=>{}
 
-    const existingPemesanan = pemesanan.find(item => item?.id_buku === book?.id_buku && item?.id_siswa === akun?.user?.id_siswa);
-    const existingPeminjaman = peminjaman.find(item => item?.id_buku === book?.id_buku && item?.id_siswa === akun?.user?.id_siswa);
-    console.log(existingPemesanan)
-    const countPemesanan = pemesanan.filter(item => item.id_siswa === akun.user?.id_siswa).length
-
-    const countPeminjaman = peminjaman.filter(item => item.id_siswa === akun.user?.id_siswa).length
-
-    console.log(pemesanan)
-    console.log(`Existing : ${existingPeminjaman}`)
-    console.log(peminjaman)
-
-    const batasBook = countPemesanan + countPeminjaman
-
-    const handleAddToCart = () => {
-
-        const existingItem = inCart(book.id_buku)
-        console.log(existingItem)
-        if(stokBuku.stok <= 0)
-        {
-            stokHabis()
-        }
-        else if (existingPemesanan) {
-            bookingAda()
-        }
-        else if (existingPeminjaman) {
-            pinjamAda()
-
-        } else if (countPemesanan === 3) {
-            pesanCount()
-        } else if (countPeminjaman === 3) {
-            pinjamCount()
-        }
-        else if (batasBook === 3) {
-            batasCount()
-        }
-        else if (existingItem) {
-            gagal()
-        } else if (totalUniqueItems === 3) {
-            cartPenuh()
-        } else {
-            addItem({
-                id: book.id_buku,
-                name: book.judul_buku,
-                price: "--",
-                penerbit: book.penerbit,
-                pengarang: book.pengarang,
-                sinopsis: book.sinopsis,
-                id_akun: akun.user.id_siswa,
-                gambar: book.gambar_buku,
-                genre: book.kategori.nama_kategori
-            });
-            notify()
-
-        }
+    if(isAuth)
+    {
+        const existingPemesanan = pemesanan.find(item => item?.id_buku === book?.id_buku && item?.id_siswa === akun?.user?.id_siswa);
+        const existingPeminjaman = peminjaman.find(item => item?.id_buku === book?.id_buku && item?.id_siswa === akun?.user?.id_siswa);
+        console.log(existingPemesanan)
+        const countPemesanan = pemesanan.filter(item => item.id_siswa === akun.user?.id_siswa).length
+    
+        const countPeminjaman = peminjaman.filter(item => item.id_siswa === akun.user?.id_siswa).length
+    
+        console.log(pemesanan)
+        console.log(`Existing : ${existingPeminjaman}`)
+        console.log(peminjaman)
+    
+        const batasBook = countPemesanan + countPeminjaman;
+        handleAddToCart = () => {
+    
+            const existingItem = inCart(book.id_buku)
+            console.log(existingItem)
+            if(stokBuku.stok <= 0)
+            {
+                stokHabis()
+            }
+            else if (existingPemesanan) {
+                bookingAda()
+            }
+            else if (existingPeminjaman) {
+                pinjamAda()
+    
+            } else if (countPemesanan === 3) {
+                pesanCount()
+            } else if (countPeminjaman === 3) {
+                pinjamCount()
+            }
+            else if (batasBook === 3) {
+                batasCount()
+            }
+            else if (existingItem) {
+                gagal()
+            } else if (totalUniqueItems === 3) {
+                cartPenuh()
+            } else {
+                addItem({
+                    id: book.id_buku,
+                    name: book.judul_buku,
+                    price: "--",
+                    penerbit: book.penerbit,
+                    pengarang: book.pengarang,
+                    sinopsis: book.sinopsis,
+                    id_akun: akun.user.id_siswa,
+                    gambar: book.gambar_buku,
+                    genre: book.kategori.nama_kategori
+                });
+                notify()
+    
+            }
+    
+        
+    }
+   
     };
+   
     const [showBookingModal, setBookingModal] = useState(false)
     const [showLogin, setShowLogin] = useState(false);
 
@@ -225,32 +232,32 @@ const BookDetail = () => {
                                         <tr>
                                             <td>Penulis</td>
                                             <td style={{ width: "5vw" }}>:</td>
-                                            <td style={{ color: "#3a3a3a", fontWeight: "500", width: "20vw" }}>{book.pengarang}</td>
+                                            <td style={{  fontWeight: "500", width: "20vw" }}>{book.pengarang}</td>
                                         </tr>
                                         <tr>
                                             <td>Penerbit</td>
                                             <td style={{ width: "5vw" }}>: &nbsp;</td>
-                                            <td style={{ color: "#3a3a3a", fontWeight: "500", width: "20vw" }}>{book.penerbit}</td>
+                                            <td style={{  fontWeight: "500", width: "20vw" }}>{book.penerbit}</td>
                                         </tr>
                                         <tr>
                                             <td>Tahun</td>
                                             <td style={{ width: "5vw" }}>: &nbsp;</td>
-                                            <td style={{ color: "#3a3a3a", fontWeight: "500", width: "20vw" }}>{book.tahun_terbit}</td>
+                                            <td style={{  fontWeight: "500", width: "20vw" }}>{book.tahun_terbit}</td>
                                         </tr>
                                         <tr>
                                             <td>ISBN</td>
                                             <td style={{ width: "5vw" }}>: &nbsp;</td>
-                                            <td style={{ color: "#3a3a3a", fontWeight: "500", width: "20vw" }}>{book.isbn}</td>
+                                            <td style={{  fontWeight: "500", width: "20vw" }}>{book.isbn}</td>
                                         </tr>
                                         <tr>
                                             <td>Genre</td>
                                             <td style={{ width: "5vw" }}>: &nbsp;</td>
-                                            <td style={{ color: "#3a3a3a", fontWeight: "500", width: "20vw" }}>{book.kategori.nama_kategori}</td>
+                                            <td style={{  fontWeight: "500", width: "20vw" }}>{book.kategori.nama_kategori}</td>
                                         </tr>
                                         <tr>
                                             <td>Stok Buku</td>
                                             <td style={{ width: "5vw" }}>: &nbsp;</td>
-                                            <td style={{ color: "#3a3a3a", fontWeight: "500", width: "20vw" }}>{stokBuku.stok>0?stokBuku.stok:"Kosong"}</td>
+                                            <td style={{  fontWeight: "500", width: "20vw" }}>{stokBuku.stok>0?stokBuku.stok:"Kosong"}</td>
                                         </tr>
                                     </table>
                                     <button className={classes["button-back"]} onClick={backHandler}>Kembali</button>
@@ -360,19 +367,22 @@ const loadPesan = async () => {
 
 export  const loader=async({ request, params })=>{
     const idBuku = params.bookId;
+    console.log(idBuku);
     let id = getUserCredentials();
-    id=id.user.id_siswa;
-    console.log(id)
-    const dataPinjam=await loadBorrowed(id)
-    const peminjamanData = dataPinjam;
-    const stok =await loadStock(idBuku)
-    console.log(peminjamanData)
+    console.log(id);
+    id=id?id.user.id_siswa:null;
+    console.log(id);
+    const dataPinjam=id!=null?await loadBorrowed(id):null;
+    const peminjamanData =id!=null?dataPinjam:null;
+    const stok =await loadStock(idBuku);
+   
+   
 
     return defer({
         book: await loadBook(idBuku),
        /*  daftarBookingDanPemesanan: data, */
        stokBuku:stok,
         peminjaman: peminjamanData,
-        pemesanan: await loadPesan()
+        pemesanan:id?await loadPesan():null
     });
 }

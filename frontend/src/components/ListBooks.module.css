@@ -73,18 +73,21 @@
  .other h1{
     margin-left: 10px;
     font-size: 25px;
+    color: #FFD369;
  }
  
  .book-detail h2{
      font-size: 15px;
      color: var(--accentblack-light);
      line-height: 1.7vw;
+     color: #FFD369;
      margin:3px 0;
  }
  
  .book-detail span{
      color: #686B6F;
      font-size: 10px;
+     color: white;
  }
 
  

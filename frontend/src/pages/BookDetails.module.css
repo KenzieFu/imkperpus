@@ -39,14 +39,14 @@
 }
 
 .cardtopmain{
-    background-color: var(--gray-light);
+    background-color:#393E46;
     height: 100%;
     padding-top: 1vw;
     padding-bottom: 6vw;
 }
 
 .cardtop{
-    background-color: var(--white-light);
+    background-color: #393E46;
     height: 100%;
     width: 97%;
     margin: auto;
@@ -92,7 +92,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 4vw;
-    
+    color: white;
     padding: 2vw;
 }
 
@@ -123,6 +123,7 @@
     padding-left: 4vw;
     font-weight: 500;
     width: 55%;
+    color: var(--white);
 }
 
 .infotable{
@@ -135,10 +136,12 @@
     height: 100%;
     width: 100%;
     font-size: 1.2vw;
+    color: var(--white);
 }
 
 td{
     width: 7vw;
+    color: var(--white);
 }
 
 tr{
@@ -146,18 +149,21 @@ tr{
 }
 
 .book_info h2{
-    color: #00278C;
+    color: #FFD369;
     font-weight: 600;
     font-size: 3vw;
     line-height: 3vw;
 }
 
 .summary {
-    color: var(--accentblack-light);
+    color: var(--white);
     width: 80%;
     margin-top: 2vw;
     font-size: 1vw;
     opacity: 55%;
+}
+.summary p{
+    color: var(--white);
 }
 
 .button-borrow{
@@ -238,9 +244,12 @@ tr{
 
 .content{
     width: 100%;
+    background-color: #393E46;
 }
 
 .layout{
     display: flex;
     align-items: flex-start;
+    background-color: #393E46;
+   
 }
