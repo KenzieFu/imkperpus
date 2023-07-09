@@ -54,6 +54,7 @@
     height: 100%;
     width: 100%;
     align-items: flex-start;
+    
 }
 
 .content-form{
@@ -62,8 +63,9 @@
     flex-direction: column;
     width: 51%;
     padding-top: 4vw;
-    padding-left: 8vw;
+    padding-left: 6vw;
     padding-right: 4vw;
+    margin-left: 20px;
 }
 
 .content-form h1{
