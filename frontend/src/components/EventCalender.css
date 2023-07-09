@@ -26,6 +26,9 @@
 .rs-btn-subtle{
     color: black;
 }
+.rs-calendar-bordered .rs-calendar-table-row:not(:last-child) .rs-calendar-table-cell{
+    border-bottom: 1px solid black;
+}
 .rs-calendar-table-header-cell{
     border-bottom: 1px solid black;
 }
@@ -49,4 +52,10 @@
     border-bottom: 1px solid black;
 }
 
+.rs-calendar-bordered .rs-calendar-table-header-row .rs-calendar-table-header-cell{
+    border-bottom: 1px solid black;
 
+}
+.rs-calendar-table-row{
+    border-bottom: 1px solid black;
+}
