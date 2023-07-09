@@ -1,0 +1,52 @@
+:root{
+    --white:#ffffff;
+    --black:black;
+    --blue:#2e55ba;
+    --accentblack:rgb(58, 58, 58);
+    --red:#FF5959;
+    --gray:#f4f1f1;
+
+    --white-light:#ffffff;
+    --blue-light:#2e55ba;
+    --accentblack-light:rgb(58, 58, 58);
+    --red-light:#FF5959;
+    --gray-light:#f4f1f1;
+
+    --white-dark:#ffffff;
+    --blue-dark:#2e55ba;
+    --accentblack-dark:rgb(58, 58, 58);
+    --red-dark:#FF5959;
+    --gray-dark:#f4f1f1;
+}
+
+.rs-calendar-body{
+    color: black;
+}
+
+.rs-btn-subtle{
+    color: black;
+}
+.rs-calendar-table-header-cell{
+    border-bottom: 1px solid black;
+}
+.rs-calendar-table-header-cell span
+{
+    color: black;
+    font-weight: bolder;
+    
+}
+.rs-calendar-table-cell-un-same-month{
+   color: gray;
+}
+.rs-calendar-bordered .rs-calendar-table{
+    border: 1px solid var(--black);
+    font-weight: bolder;
+}
+.rs-calendar-table
+
+
+.rs-calendar-table-row .rs-calendar-table-header-row{
+    border-bottom: 1px solid black;
+}
+
+

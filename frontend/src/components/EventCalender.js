@@ -4,6 +4,7 @@ import { useRouteLoaderData } from 'react-router-dom';
 import { Badge, Popover, Whisper } from "rsuite"
 import Calendar from 'rsuite/Calendar';
 import 'rsuite/dist/rsuite.min.css';
+import "./EventCalender.css"
 
 
 export const EventCalender = ({pickDateHandler,pickCurrentDate,events,reset}) => {
@@ -98,7 +99,7 @@ export const EventCalender = ({pickDateHandler,pickCurrentDate,events,reset}) =>
     
       return(
         <>
-            <Calendar style={{ borderColor:"red",border:"solid 5px",borderRadius:"20px" }} onSelect={clickHandler} bordered={true}  renderCell={renderCell} />
+            <Calendar style={{background:"#FFD369", color:"black", borderColor:"black",border:"solid 5px",borderRadius:"20px" }} onSelect={clickHandler} bordered={true}  renderCell={renderCell} />
         </>
       )
       
