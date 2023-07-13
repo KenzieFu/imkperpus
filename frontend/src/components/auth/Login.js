@@ -121,19 +121,12 @@ const LoginModal = (props) => {
   return (
     <Modal onClose ={props.onClose}>
       <div className={classes["flexlogin"]}>
-      <img className={classes["loginimg"]} src='./assets/cwbuilding.png'/>
+      <img className={classes["loginimg"]} src='./assets/loginbg.png'/>
       <div className={classes["modallogin"]}>
       <div className={classes["close-logo"]} onClick={props.onClose}>+</div>
       <header className={classes["login-header"]}>
-        <div className={classes["classheader"]}>
-
-        <img className={classes["loginlogo"]} src='./assets/loginlogo.png'/>
-        
-          <h1 className={classes["logo-h1"]}>Selamat Datang di <br></br>Methodist Charles Wesley</h1>
-
-        </div>
-        
-        <p className={classes["logo-p"]}>Mohon login untuk memiliki akses ke berbagai fasilitas sekolah</p>
+        <h1 className={classes["logo-h1"]}>Welcome to  <span>The Crown Library</span></h1>
+        <p className={classes["logo-p"]}>Login to gain access to the Library!</p>
       </header>
 
       <div className={classes["errord"]}>
@@ -142,18 +135,20 @@ const LoginModal = (props) => {
 
         <form className={classes.form} action="">
           <div>
+          <label htmlFor='nama'>Username</label>
           <input placeholder="Username" onBlur={usernameBlurHandler} onChange={event=>usernameChangeHandler(event)} value={enteredUsername} type="text" id='username' />
           <div className={classes["errorp"]}>
           {usernameHasError && <p>{usernameErrMsg}</p>}
           </div>
           </div>
           <div>
+          <label htmlFor='nama'>Password</label>
           <input placeholder="Password" onBlur={passBlurHandler} onChange={(event)=>passChangeHandler(event)} value={enteredPass} type="password" id='pass' />
           <div className={classes["errorp"]}>
           {passHasError && <p>{passErrMsg}</p>}
           </div>
           </div>
-          <button onClick={(e)=>login(e)} disabled={!formValid }  className={classes["login-button"]}>Masuk</button>
+          <button onClick={(e)=>login(e)} disabled={!formValid }  className={classes["login-button"]}>Login</button>
         </form>
         </div>
         </div>
