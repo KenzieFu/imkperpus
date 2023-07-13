@@ -20,7 +20,7 @@ const submitHandler=(e)=>{
     document.getElementById("formpesan").reset()
     notify()
 }
-const notify = () => toast.success('Pesan berhasil ditambahkan', {
+const notify = () => toast.success('Message Uploaded', {
     position: "top-center",
     autoClose: 5000,
     hideProgressBar: false,
@@ -32,7 +32,7 @@ const notify = () => toast.success('Pesan berhasil ditambahkan', {
 });
 
 
-const gagal = () => toast.warning('Pesan Gagal Ditambahkan', {
+const gagal = () => toast.warning('Sorry, there was a mistake.', {
     position: "top-center",
     autoClose: 5000,
     hideProgressBar: false,
@@ -55,7 +55,7 @@ const gagal = () => toast.warning('Pesan Gagal Ditambahkan', {
                             </div>
                             <Form id="formpesan" method="POST">
                                 <div className={classes['content-input']}>
-                                    <label htmlFor='nama'>Nama Lengkap</label>
+                                    <label htmlFor='nama'>Full Name</label>
                                     <input required name="nama" type="text" placeholder="Nama Lengkap"></input>
                                 </div>             
                                 <div className={classes['content-input']}>
@@ -74,7 +74,7 @@ const gagal = () => toast.warning('Pesan Gagal Ditambahkan', {
                                     <label htmlFor='pesan'>Message</label>
                                     <textarea name="pesan" rows="6"></textarea>
                                 </div>
-                                <button type="submit" onClick={(e)=>submitHandler(e)} className={classes['kirimbutton']}>Kirim Pesan</button>
+                                <button type="submit" onClick={(e)=>submitHandler(e)} className={classes['kirimbutton']}>Upload message</button>
                             </Form >
                         </div>
                         <div className={classes['maps']}>
@@ -87,23 +87,10 @@ const gagal = () => toast.warning('Pesan Gagal Ditambahkan', {
                     <div className={classes.main2}>
                         <div className={classes['main2con']}>
                         <div style={{paddingLeft:"3vw"}}>
-                        <span style={{fontSize:"1.25vw" }}> Lokasi Kami </span>
-                        <h1> Kunjungi Sekolah Kami </h1>
-                        <span> Jam kerja : 7:30 AM - 15:00 PM</span>
+                        <span style={{fontSize:"1.5vw" }}> Our Location </span>
+                        <h1> Visit Our Library </h1>
+                        <span style={{fontSize:"1.5vw" }}> Working hours: 7:30 AM - 15:00 PM</span>
                         </div>
-                        </div>
-                        <div className={classes['main2con2']} style={{paddingLeft:"3vw"}}>
-                        <h2> Email </h2>
-                        <span> info@methodistcw.sch.id</span>
-                        <span> methodistcw@gmail.com</span>
-                        <br></br>
-                        <h2>Phone</h2>
-                        <span>(061) – 4277 1542</span>
-                        <span>0878 6912 3707 (WA)</span>
-                        <br></br>
-                        {/* <h2> Lokasi </h2>
-                        <span> Komplek CBD. Polonia Blok CC No.108Jl. </span>
-                        <span>Padang Golf (dalam) Medan – Sumatera Utara 20157</span> */}
                         </div>
                         <div className={classes['main2con2']}>
                         <div className={classes['minilogo']}></div>
