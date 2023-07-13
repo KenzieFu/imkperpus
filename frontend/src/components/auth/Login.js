@@ -17,7 +17,7 @@ const LoginModal = (props) => {
   const usernameValidate=(value,errorHandler)=>{
     if(value.trim() ==='')
       {
-        errorHandler('*Username tidak boleh kosong')
+        errorHandler('*Username cannot be empty')
        
       }
 
@@ -29,13 +29,13 @@ const LoginModal = (props) => {
 
     if(value.trim()==='')
     { 
-      errorHandler("*Password tidak boleh kosong");
+      errorHandler("*Password cannot be empty");
     }
       
     else if(value.length < 8)
     {
       
-      errorHandler("*Harus terdiri 8 karakter");
+      errorHandler("*Must be 8 Characters or more");
     }
       
 
@@ -79,11 +79,11 @@ const LoginModal = (props) => {
         });
 
         if(response.status === 404)
-          setCredError("Akun tidak ditemukan!");
+          setCredError("Account not found!");
 
         else if(response.status === 401)
         {
-          setCredError("Username dan Password Tidak Cocok!")
+          setCredError("Username dan Password is wrong!")
         }
         else if(response.status ===500)
         {
