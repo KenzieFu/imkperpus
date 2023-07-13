@@ -8,7 +8,7 @@ export const ConfirmationModal = ({onClose,book,deleteItem,method}) => {
     <>
         <Modal onClose={onClose}>
             <Form method={method}>
-            <div><i class="fa fa-times" style={{color: "#Df5656", fontSize: "20px"}}  aria-hidden="true"></i></div>
+            <div><i onClick={onClose} class="fa fa-times" style={{color: "#Df5656", fontSize: "20px"}}  aria-hidden="true"></i></div>
                 <div className={classes['form']}>
                     <h4>Apa Anda Yakin?</h4>
                     <p>Apakah Anda Yakin Ingin Menghapus Pemesanan Buku Anda Yang Berjudul "{book}"</p>
