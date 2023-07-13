@@ -54,9 +54,10 @@
 
 .box-section{
     /* border: solid 3px black; */
-    padding: 10px;
+    padding: 30px 40px;
     border-radius: 20px;
     margin:10px 5px;
+    background:#393E46;
 }
 
 .paginate1{
@@ -67,14 +68,14 @@
 
 .title_item{
     margin-left: 10px;
-    color: #00278C;
+    color: #FFD369;
     font-size: 2vw;
     font-weight: bold;
 }
 
 .details{
     margin-top: 5vh;
-    color: #00278C;
+    color: white;
     font-size: 1.3vw;
     font-weight: 600;
 }
@@ -89,6 +90,7 @@
 
 .container {
     display: flex;
+    
   }
   
 .left {
@@ -102,19 +104,23 @@
 .content_event{
     margin-top: 10px;;
     width: 1000px;
+    color: #AAAAAA;
   }
 
   .content_event i{
-    margin-right: 20px;;
+    margin-right: 20px;
+    color: #AAAAAA;
   }
 
 .calendar{
     margin-top: 5px;
     margin-bottom: 5px;
+    color: #AAAAAA;
   }
 
   .calendar i{
-    margin-right: 15px;;
+    margin-right: 15px;
+    color: #AAAAAA;
   }
 
 .status{

@@ -38,6 +38,10 @@ const Event = sequelize.define(
       type: DataTypes.ENUM("Siswa", "Guru"),
       allowNull: false,
     },
+    editable: {
+      type: DataTypes.ENUM("Yes", "No"),
+      allowNull: false,
+    },
   },
   {
     tableName: "events",

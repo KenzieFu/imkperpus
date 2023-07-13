@@ -58,7 +58,7 @@ let display=selectedDate.map((item,index)=>{if(index === currentIndex)return(
 <div className={classes['left']}>
     <div className={classes['bungkus']}>
     <div className={classes['garis']}></div>
-    <div className= {classes.title_item}>{item.tipe} -- {item.title_event}</div> </div>
+    <div className= {classes.title_item}>{item.title_event}</div> </div>
     <div className= {classes.details}>Details</div>
     <div className= {classes.content_event}><i class="fa fa-bars" aria-hidden="true"></i>{item.content_event}</div>
     <div className= {classes.calendar}><i class="fa fa-calendar-check-o" aria-hidden="true"></i> {item.tanggal_event}</div>
@@ -72,17 +72,17 @@ let display=selectedDate.map((item,index)=>{if(index === currentIndex)return(
             </DropdownToggle>
             <DropdownMenu>
             {user.isAuth &&<div>
-              {user.user?.id_akun ===item.id_akun &&
+              {user.user?.id_akun ===item.id_akun && item.editable=="Yes" &&
               <DropdownItem onClick={showEditHandler} className="box-menu">
                 Edit
               </DropdownItem>}
-              {user.user?.id_akun ===item.id_akun &&
+              {user.user?.id_akun ===item.id_akun && item.editable=="Yes" &&
               <Form method='Delete'>
               <input
               type="text" name='id_event' value={selectedDate[currentIndex].id_event} hidden/>
               {/* <button type='submit' onClick={(e)=>deleteHandler(e)}></button> */}
               <DropdownItem onClick={(e)=>deleteHandler(e)} className="box-menu">
-                Delete
+                Delete 
               </DropdownItem>
               </Form>}
               <DropdownItem onClick={showHandler} className="box-menu">

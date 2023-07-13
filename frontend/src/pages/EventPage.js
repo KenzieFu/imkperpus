@@ -32,7 +32,7 @@ export const EventPage = () => {
     <div className={classes.content}>
         <Sidebar/>
         <Suspense>
-        <div style={{ width:"90%" }}>
+        <div style={{ width:"90%", }}>
             <EventSection onPageHandler={onPageHandler} updateListHandler={pickDateHandler} currentDate={currentDate} currentIndex={currentIndex}  selectedDate={clickedEvent} />
          
                 <Await resolve={events}>
@@ -91,7 +91,8 @@ export async function action({ params, request }) {
     tanggal_event:data.get("tanggal_event"),
     id_akun:data.get("id_akun"),
     status:"Privat",
-    tipe:"Siswa"
+    tipe:"Siswa",
+    editable:"Yes"
   }
 
 

@@ -78,9 +78,11 @@ const gagal = () => toast.warning('Pesan Gagal Ditambahkan', {
                             </Form >
                         </div>
                         <div className={classes['maps']}>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15928.549808925341!2d98.6774323!3d3.5557885!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303130140e390193%3A0xca430cedd941f45f!2sMethodist%20Charles%20Wesley!5e0!3m2!1sen!2sid!4v1681642945352!5m2!1sen!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.9895598527173!2d98.674173!3d3.589869099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303131cf83481853%3A0x3a7bca4684a64298!2sAryaduta%20Medan!5e0!3m2!1sen!2ssg!4v1689248257189!5m2!1sen!2ssg" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
+
+                  
 
                     <div className={classes.main2}>
                         <div className={classes['main2con']}>

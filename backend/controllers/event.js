@@ -14,7 +14,7 @@ exports.createEvent = async (req, res, next) => {
   // }
 
   try {
-    const { title_event, content_event, tanggal_event, id_akun, status, tipe } = req.body;
+    const { title_event, content_event, tanggal_event, id_akun, status, tipe,editable } = req.body;
 
     const event = await Event.create({
       title_event,
@@ -23,6 +23,7 @@ exports.createEvent = async (req, res, next) => {
       id_akun,
       status,
       tipe,
+      editable
     });
 
     res.status(201).json({
@@ -48,7 +49,7 @@ exports.updateEvent = async (req, res, next) => {
 
   try {
     const { title_event, content_event, tanggal_event, id_akun, status, tipe } = req.body;
-
+      
     const event = await Event.update(
       {
         title_event,
