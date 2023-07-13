@@ -1,18 +1,32 @@
 import { CartProvider, useCart } from "react-use-cart";
 import Modal from "../UI/Modal";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useSelector } from "react-redux";
 import { Button } from "reactstrap";
 import { useLocation, useNavigate } from "react-router-dom";
 import classes from "./BookCart.module.css";
+import { Rules } from "./Rules";
 
 export default function Cart(props) {
+    const[showRule,setRule]=useState(false);
     const location=useLocation();
     const authen = useSelector(state => state.auth.isAuth);
     const akun = useSelector((state) => state.auth.user)
     const navigate = useNavigate();
+
+    const showRulefunc=()=>{
+        if(!isEmpty)
+        {
+            setRule((prev)=>!prev);
+        }
+        else{
+            navigate('library');
+            props.onClose();
+        }
+       
+    }
 
     console.log(akun)
     const {
@@ -89,7 +103,7 @@ export default function Cart(props) {
 
     const [hidden, setHidden] = React.useState(false)
 
-    const bookingHandler = async (onClose) => {
+    const bookingHandler = async () => {
 
 
 
@@ -98,7 +112,7 @@ export default function Cart(props) {
         try {
             if (isEmpty) {
                 navigate('library')
-                onClose()
+                props.onClose()
 
 
             } else {
@@ -129,6 +143,7 @@ export default function Cart(props) {
                 if(response.status === 500)
                 {
                     cartPeminjamanMax()
+                    showRulefunc()
 
                     return
                 }
@@ -146,6 +161,7 @@ export default function Cart(props) {
                 const createdData = await response.json();
 
                 console.log('Data created:', createdData);
+                showRulefunc();
                 emptyCart()
                 sukses()
                 navigate(location.pathname);
@@ -163,7 +179,7 @@ export default function Cart(props) {
 
     return (
         <>
-            <Modal>
+         {!showRule &&   <Modal>
                 {isEmpty ?
                     <div className={classes['mainall']}>
                         <div className={classes['vectorimg']}></div>
@@ -235,9 +251,17 @@ export default function Cart(props) {
                 }
                 <div className={classes['buttonbatch']}>
                     <Button className={classes.buttclose} onClick={props.onClose}><i class="fa fa-times" aria-hidden="true"></i> Tutup</Button>
-                    <Button className={classes.buttopen} onClick={bookingHandler} >{isEmpty ? "Ke Perpus!" : "Pesan !"}</Button>
+                    <Button className={classes.buttopen} onClick={showRulefunc} >{isEmpty ? "Ke Perpus!" : "Pesan !"}</Button>
                 </div>
-            </Modal>
+            </Modal>}
+            {
+                showRule && 
+                <Modal onClose={showRulefunc}>
+                    <Rules onClose={showRulefunc} bookingHandler={bookingHandler} />
+                </Modal>
+            }
+
+
         </>
     );
 }
