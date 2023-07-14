@@ -250,7 +250,7 @@ export default function Cart(props) {
                     </>
                 }
                 <div className={classes['buttonbatch']}>
-                    {/* <Button className={classes.buttclose} onClick={props.onClose}><i class="fa fa-times" aria-hidden="true"></i> Close </Button> */}
+                    <Button className={classes.buttclose} onClick={props.onClose}><i class="fa fa-times" aria-hidden="true"></i> Close </Button>
                     <Button className={classes.buttopen} onClick={showRulefunc} >{isEmpty ? "To the Library!" : "Order !"}</Button>
                 </div>
             </Modal>}
