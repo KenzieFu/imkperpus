@@ -271,7 +271,7 @@ export const DaftarBukuPinjamPage = () => {
 
 
 const loadPinjams = async () => {
-  const response = await fetch("http://localhost:8080/admin-perpustakaan-methodist-cw/peminjaman")
+  const response = await fetch("http://localhost:8080/admin-perpustakaan-crown/peminjaman")
   console.log(response);
   if (!response.ok) {
     throw json(
@@ -299,7 +299,7 @@ export async function action({ params, request }) {
   const method = request.method;
   const data = await request.formData();
   console.log(data);
-  const response = await fetch('http://localhost:8080/admin-perpustakaan-methodist-cw/peminjaman/' + data.get('id'), {
+  const response = await fetch('http://localhost:8080/admin-perpustakaan-crown/peminjaman/' + data.get('id'), {
     method: method,
     headers: {
       "Authorization": "Bearer",

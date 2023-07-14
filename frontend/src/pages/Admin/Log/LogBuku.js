@@ -85,7 +85,7 @@ export const LogBuku = () => {
 
 const loadLogBooks=async ()=>{
 
-    const response = await fetch("http://localhost:8080/admin-perpustakaan-methodist-cw/log-buku")
+    const response = await fetch("http://localhost:8080/admin-perpustakaan-crown/log-buku")
     console.log(response);
     if(!response.ok)
     {

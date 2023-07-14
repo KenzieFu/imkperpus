@@ -83,7 +83,7 @@ export const DetailPinjam = () => {
 
 
 const loadAdminPinjam=async (id)=>{
-  const response = await fetch("http://localhost:8080/admin-perpustakaan-methodist-cw/peminjaman/"+id);
+  const response = await fetch("http://localhost:8080/admin-perpustakaan-crown/peminjaman/"+id);
   console.log(response);
   if(!response.ok)
   {

@@ -39,7 +39,7 @@ export const CreateAbsensi = () => {
 
 
 const loadStudents=async ()=>{
-    const response = await fetch("http://localhost:8080/admin-perpustakaan-methodist-cw/siswa")
+    const response = await fetch("http://localhost:8080/admin-perpustakaan-crown/siswa")
     console.log(response);
     if(!response.ok)
     {
@@ -69,7 +69,7 @@ const loadStudents=async ()=>{
     const data = await request.formData();
     const currentDate=new Date().toDateString();
     const time=new Date().toTimeString()
-    const response = await fetch('http://localhost:8080/admin-perpustakaan-methodist-cw/absensi', {
+    const response = await fetch('http://localhost:8080/admin-perpustakaan-crown/absensi', {
       method: method,
       headers:{
         "Content-Type":"application/json",

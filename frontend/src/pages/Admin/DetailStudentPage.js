@@ -116,7 +116,7 @@ export const DetailStudentPage = () => {
 
 
 const loadStudent=async (id)=>{
-  const response = await fetch("http://localhost:8080/admin-perpustakaan-methodist-cw/siswa/" + id)
+  const response = await fetch("http://localhost:8080/admin-perpustakaan-crown/siswa/" + id)
   console.log(response);
   if(!response.ok)
   {

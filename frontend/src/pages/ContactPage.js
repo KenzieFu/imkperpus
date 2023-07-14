@@ -163,7 +163,7 @@ export const action = async({request})=>{
         pesan:formData.get('pesan')
     }
     console.log(value)
-    const response=await fetch("http://localhost:8080/admin-perpustakaan-methodist-cw/pesan-masuk",
+    const response=await fetch("http://localhost:8080/admin-perpustakaan-crown/pesan-masuk",
     {
         method:"POST",
         headers:{

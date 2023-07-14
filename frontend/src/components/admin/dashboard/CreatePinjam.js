@@ -62,7 +62,7 @@ export const CreatePinjam = () => {
   const handleCreate = async () => {
     try {
 
-      const response = await fetch('http://localhost:8080/admin-perpustakaan-methodist-cw/peminjaman', {
+      const response = await fetch('http://localhost:8080/admin-perpustakaan-crown/peminjaman', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -129,7 +129,7 @@ export const CreatePinjam = () => {
 }
 
 const loadBuku=async ()=>{
-  const response = await fetch("http://localhost:8080/admin-perpustakaan-methodist-cw/buku")
+  const response = await fetch("http://localhost:8080/admin-perpustakaan-crown/buku")
   console.log(response);
   if(!response.ok)
   {
@@ -148,7 +148,7 @@ const loadBuku=async ()=>{
 }
 
 const loadSiswa=async ()=>{
-  const response = await fetch("http://localhost:8080/admin-perpustakaan-methodist-cw/siswa")
+  const response = await fetch("http://localhost:8080/admin-perpustakaan-crown/siswa")
   console.log(response);
   if(!response.ok)
   {

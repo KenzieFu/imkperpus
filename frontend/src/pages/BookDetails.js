@@ -289,7 +289,7 @@ const BookDetail = () => {
 export default BookDetail
 
 const loadBook = async (id) => {
-    const response = await fetch("http://localhost:8080/perpustakaan-methodist-cw/buku/" + id)
+    const response = await fetch("http://localhost:8080/perpustakaan-crown/buku/" + id)
     console.log(response);
     if (!response.ok) {
         throw json(
@@ -306,7 +306,7 @@ const loadBook = async (id) => {
 }
 
 const loadStock=async(id)=>{
-    const response=await fetch("http://localhost:8080/perpustakaan-methodist-cw/buku-perpus/"+id);
+    const response=await fetch("http://localhost:8080/perpustakaan-crown/buku-perpus/"+id);
     console.log(response);
     if(!response.ok)
     {
@@ -324,7 +324,7 @@ const loadStock=async(id)=>{
 
 const loadBorrowed = async (id) => {
     const data=getUserCredentials()
-    const response = await fetch("http://localhost:8080/perpustakaan-methodist-cw/peminjaman-siswa-by-user",{
+    const response = await fetch("http://localhost:8080/perpustakaan-crown/peminjaman-siswa-by-user",{
         method:"GET",
         headers:{
             "Authorization":"Bearer "+data.accessToken
@@ -349,7 +349,7 @@ const loadBorrowed = async (id) => {
 
 
 const loadPesan = async () => {
-    const response = await fetch("http://localhost:8080/perpustakaan-methodist-cw/pemesanan-buku/")
+    const response = await fetch("http://localhost:8080/perpustakaan-crown/pemesanan-buku/")
     console.log(response);
     if (!response.ok) {
         throw json(

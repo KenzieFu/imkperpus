@@ -61,8 +61,8 @@ export const CreateBuku = () => {
 
   const fetchOptions = async () => {
     try {
-      const response1 = await fetch("http://localhost:8080/admin-perpustakaan-methodist-cw/buku"); // Replace with your API endpoint for table 1
-      const response2 = await fetch("http://localhost:8080/admin-perpustakaan-methodist-cw/kategori"); // Replace with your API endpoint for table 2
+      const response1 = await fetch("http://localhost:8080/admin-perpustakaan-crown/buku"); // Replace with your API endpoint for table 1
+      const response2 = await fetch("http://localhost:8080/admin-perpustakaan-crown/kategori"); // Replace with your API endpoint for table 2
 
       const data1 = await response1.json();
       const data2 = await response2.json();
@@ -147,7 +147,7 @@ export const CreateBuku = () => {
       //   isbn:formData.isbn
       // }
 
-     const response= await fetch('http://localhost:8080/admin-perpustakaan-methodist-cw/buku', {
+     const response= await fetch('http://localhost:8080/admin-perpustakaan-crown/buku', {
         method: 'POST',
       //   headers: {
       //      "Content-Type": "multipart/form-data",

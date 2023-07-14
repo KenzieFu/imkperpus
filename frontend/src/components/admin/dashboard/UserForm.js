@@ -82,11 +82,11 @@ export async function action({ request, params }) {
     hak_akses: data.get('hak_akses'),
   };
 
-  let url = 'http://localhost:8080/admin-perpustakaan-methodist-cw/akun';
+  let url = 'http://localhost:8080/admin-perpustakaan-crown/akun';
 
   if (method === 'PUT') {
     const id = params.idAkun;
-    url = 'http://localhost:8080/admin-perpustakaan-methodist-cw/akun/' + id;
+    url = 'http://localhost:8080/admin-perpustakaan-crown/akun/' + id;
   }
 
   const response = await fetch(url, {

@@ -179,7 +179,7 @@ export const DetailBuku = () => {
 
 
 const loadAdminBook=async (id)=>{
-    const response = await fetch("http://localhost:8080/admin-perpustakaan-methodist-cw/buku/"+id);
+    const response = await fetch("http://localhost:8080/admin-perpustakaan-crown/buku/"+id);
     console.log(response);
     if(!response.ok)
     {
@@ -198,7 +198,7 @@ const loadAdminBook=async (id)=>{
   }
 
   const loadStocks=async(id)=>{
-    const response = await fetch("http://localhost:8080/perpustakaan-methodist-cw/buku-perpus/"+id);
+    const response = await fetch("http://localhost:8080/perpustakaan-crown/buku-perpus/"+id);
   
       const resData = await response.json();
       return resData;
@@ -220,9 +220,9 @@ const loadAdminBook=async (id)=>{
    
    const data=await request.formData();
    console.log(data.get("id_buku"))
-   let url="http://localhost:8080/admin-perpustakaan-methodist-cw/buku-perpus";
+   let url="http://localhost:8080/admin-perpustakaan-crown/buku-perpus";
    if(method === "PUT")
-    url="http://localhost:8080/admin-perpustakaan-methodist-cw/buku-perpus/"+data.get("id_buku");
+    url="http://localhost:8080/admin-perpustakaan-crown/buku-perpus/"+data.get("id_buku");
     
 
     console.log(url)
@@ -258,5 +258,5 @@ const loadAdminBook=async (id)=>{
   
 
 
-/*   http://localhost:8080/admin-perpustakaan-methodist-cw/buku-perpus
+/*   http://localhost:8080/admin-perpustakaan-crown/buku-perpus
  */

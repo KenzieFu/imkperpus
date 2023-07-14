@@ -18,14 +18,14 @@ return (
       <h1>Contact Us</h1>
       <table>
         <tr>
-          <td>Email</td>
-          <td>&nbsp; : &nbsp;</td>
-          <td>thecrownlibrary@gmail.com </td>
+          <td style={{ color:"black" }}>Email</td>
+          <td style={{ color:"black" }}>&nbsp; : &nbsp;</td>
+          <td style={{ color:"black" }}>thecrownlibrary@gmail.com </td>
         </tr>
         <tr>
-          <td>Phone</td>
-          <td> &nbsp; : &nbsp;</td>
-          <td>(061) – 123 456</td>
+          <td style={{ color:"black" }}>Phone</td>
+          <td style={{ color:"black" }}> &nbsp; : &nbsp;</td>
+          <td style={{ color:"black" }}>(061) – 123 456</td>
         </tr>
       </table>
     </div>
