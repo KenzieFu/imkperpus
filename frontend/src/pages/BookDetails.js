@@ -16,7 +16,7 @@ import { getUserCredentials } from "../components/util/auth";
 
 const BookDetail = () => {
     console.log("nasiodhalsdhoas")
-    const notify = () => toast.success('Buku berhasil ditambahkan ke booking list!', {
+    const notify = () => toast.success('Booking Success', {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
@@ -28,7 +28,7 @@ const BookDetail = () => {
     });
 
 
-    const gagal = () => toast.warning('Buku sudah ada di booking list!', {
+    const gagal = () => toast.warning('Book is already on the booking list!', {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
@@ -38,7 +38,7 @@ const BookDetail = () => {
         progress: undefined,
         theme: "colored",
     });
-    const stokHabis = () => toast.warning('Buku sedang Kosong', {
+    const stokHabis = () => toast.warning('Book is out of stock', {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
@@ -48,7 +48,7 @@ const BookDetail = () => {
         progress: undefined,
         theme: "colored",
     });
-    const cartPenuh = () => toast.warning('Cart kamu sudah penuh! Ingat, buku yang dibooking maksimal 3!', {
+    const cartPenuh = () => toast.warning('Your cart is full! Maximum booking is 3', {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
@@ -58,7 +58,7 @@ const BookDetail = () => {
         progress: undefined,
         theme: "colored",
     });
-    const bookingAda = () => toast.error('Kamu sudah pesan buku ini! Ayo segera ambil di perpustakaan!', {
+    const bookingAda = () => toast.error('You have ordered this book, grab it at the library', {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
@@ -68,7 +68,7 @@ const BookDetail = () => {
         progress: undefined,
         theme: "colored",
     });
-    const pinjamAda = () => toast.error('Kamu sedang meminjam buku ini! Selesaikan terlebih dahulu lalu pesan lagi!', {
+    const pinjamAda = () => toast.error('You have borrowed this book, finish it first!', {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
@@ -78,7 +78,7 @@ const BookDetail = () => {
         progress: undefined,
         theme: "colored",
     });
-    const pinjamCount = () => toast.error('Buku yang kamu pinjam sudah lebih dari 3!', {
+    const pinjamCount = () => toast.error('Books borrowed is over the limit!', {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
@@ -88,7 +88,7 @@ const BookDetail = () => {
         progress: undefined,
         theme: "colored",
     });
-    const pesanCount = () => toast.error('Buku yang kamu pesan sudah melebihi batas (max 3), Segera jemput buku kamu di perpustakaan!', {
+    const pesanCount = () => toast.error('Books booked is over the limit (3), please grab the book at the library!', {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
@@ -98,7 +98,7 @@ const BookDetail = () => {
         progress: undefined,
         theme: "colored",
     });
-    const batasCount = () => toast.error('Kamu sudah mencapai batas maksimal pemesanan buku! Harap selesaikan buku yang anda pinjam atau pemesanan yang lain sebelum memesan lagi!', {
+    const batasCount = () => toast.error('Books borrowed is over the limit! Please finsih it first.', {
         position: "top-center",
         autoClose: 7000,
         hideProgressBar: false,
@@ -212,7 +212,7 @@ const BookDetail = () => {
                     <div className={classes.cardtop}>
                         <div className={classes.covertop}>
                             <div className={classes['texttop']}>
-                                <h1>Yuk Baca Buku!</h1>
+                                {/* <h1>The Crown Library</h1> */}
                               
                             </div>
                         </div>
@@ -230,17 +230,17 @@ const BookDetail = () => {
                                 <div className={classes.infotable}>
                                     <table>
                                         <tr>
-                                            <td>Penulis</td>
+                                            <td>Author</td>
                                             <td style={{ width: "5vw" }}>:</td>
                                             <td style={{  fontWeight: "500", width: "20vw" }}>{book.pengarang}</td>
                                         </tr>
                                         <tr>
-                                            <td>Penerbit</td>
+                                            <td>Publisher</td>
                                             <td style={{ width: "5vw" }}>: &nbsp;</td>
                                             <td style={{  fontWeight: "500", width: "20vw" }}>{book.penerbit}</td>
                                         </tr>
                                         <tr>
-                                            <td>Tahun</td>
+                                            <td>Year</td>
                                             <td style={{ width: "5vw" }}>: &nbsp;</td>
                                             <td style={{  fontWeight: "500", width: "20vw" }}>{book.tahun_terbit}</td>
                                         </tr>
@@ -255,12 +255,12 @@ const BookDetail = () => {
                                             <td style={{  fontWeight: "500", width: "20vw" }}>{book.kategori.nama_kategori}</td>
                                         </tr>
                                         <tr>
-                                            <td>Stok Buku</td>
+                                            <td>Stock</td>
                                             <td style={{ width: "5vw" }}>: &nbsp;</td>
                                             <td style={{  fontWeight: "500", width: "20vw" }}>{stokBuku.stok>0?stokBuku.stok:"Kosong"}</td>
                                         </tr>
                                     </table>
-                                    <button className={classes["button-back"]} onClick={backHandler}>Kembali</button>
+                                    <button className={classes["button-back"]} onClick={backHandler}>Back</button>
                                     {/* button ini belum jalan seperti semestinya */}
                                     {showLogin && <LoginModal onClose={closeLoginModal} />}
                                     {/* {showBookingModal && <BookingModals onClose={closeBookingModalHandler} id={book.id_buku} judulBuku={book.judul_buku}/>} */}

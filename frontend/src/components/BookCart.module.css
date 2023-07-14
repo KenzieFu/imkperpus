@@ -1,21 +1,32 @@
 :root{
     --white:#ffffff;
+    --dablue: #222831;
     --blue:#2e55ba; 
-    --accentblack:rgb(58, 58, 58);
-    --red:#FF5959;
-    --gray:#f4f1f1;
+    --accentblack:#313131;
+    --yellow:#FFD369;
+    --yellow:#FFD369;
+    --addgray:#DBD0C0;
+    --gray:#FAEEE0;
+    --beige:#F9CF93;
+    --lbeige:#FAEEE0;
 
     --white-light:#ffffff;
     --blue-light:#2e55ba;
-    --accentblack-light:rgb(58, 58, 58);
-    --red-light:#FF5959;
+    --accentblack-light:#313131;
+    --yellow-light:#FFD369;
     --gray-light:#f4f1f1;
+    --addgray-light:#e3e3e3;
+    --beige-light:#F9CF93;
+    --lbeige-light:#FAEEE0;
 
     --white-dark:#ffffff;
     --blue-dark:#2e55ba;
-    --accentblack-dark:rgb(58, 58, 58);
-    --red-dark:#FF5959;
+    --accentblack-dark:#313131;
+    --yellow-dark:#FFD369;
     --gray-dark:#f4f1f1;
+    --addgray-dark:#e3e3e3;
+    --beige-light:#F9CF93;
+    --lbeige-light:#FAEEE0;
 }
 
 @media(prefers-color-scheme: dark){
@@ -189,15 +200,17 @@
 }
 
 .buttopen{
-    background-color: var(--red-light);
+    background-color: var(--yellow);
+    font-weight: 600;
+    color: var(--dablue);
     border-radius: 0.8vw;
     border: none;
     transition: all .3s ease;
 }
 
 .buttopen:hover{
-    background-color: var(--red-light);
     transform: translateY(-0.4vw);
+    color: var(--yellow);
 }
 
 .mainall{
