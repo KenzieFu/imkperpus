@@ -37,7 +37,7 @@ export default function Cart(props) {
         emptyCart
     } = useCart();
 
-    const notify = () => toast.success('Buku berhasil dihapus dari booking list!', {
+    const notify = () => toast.success('Book removed from the Booking List!', {
         position: "top-center",
         autoClose: 3000,
         hideProgressBar: false,
@@ -48,7 +48,7 @@ export default function Cart(props) {
         theme: "colored",
     });
 
-    const sukses = () => toast.success('Buku berhasil dibooking!', {
+    const sukses = () => toast.success('Booking Success!', {
         position: "top-center",
         autoClose: 3000,
         hideProgressBar: false,
@@ -59,7 +59,7 @@ export default function Cart(props) {
         theme: "colored",
     });
 
-    const error = () => toast.error('Buku tidak berhasil dibooking :(', {
+    const error = () => toast.error('Booking failed :(', {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
@@ -69,7 +69,7 @@ export default function Cart(props) {
         progress: undefined,
         theme: "colored",
     });
-    const cartKosong = () => toast.warning('Booking Listmu masih kosong! Ayo isi sekarang!', {
+    const cartKosong = () => toast.warning('Booking Listmu is empty! Explore more!', {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
@@ -79,7 +79,7 @@ export default function Cart(props) {
         progress: undefined,
         theme: "colored",
     });
-    const bookingAda = () => toast.error('Kamu sudah pesan buku ini! Ayo segera ambil di perpustakaan!', {
+    const bookingAda = () => toast.error('You have ordered this book, please pick it up at the library', {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
@@ -183,12 +183,12 @@ export default function Cart(props) {
                 {isEmpty ?
                     <div className={classes['mainall']}>
                         <div className={classes['vectorimg']}></div>
-                        <p>Yah, keranjangmu kosong nih :(</p>
-                        <span>Yuk liat-liat perpustakaan </span>
+                        <p>Aw, your Booking List is empty :(</p>
+                        <span>Let’s explore the Library!</span>
 
                     </div> :
                     <>
-                        <h1 className={classes['judulall']}> Daftar Pemesanan <span>{totalUniqueItems}</span></h1>
+                        <h1 className={classes['judulall']}> Booking List <span>{totalUniqueItems}</span></h1>
 
                         <div className={classes['divpenuh']}>
                             {items.map((item) => (
@@ -217,7 +217,7 @@ export default function Cart(props) {
                                                 </tr>
                                                 <tr>
                                                     <th>
-                                                        Pengarang
+                                                        Author
                                                     </th>
 
                                                     <td>
@@ -226,7 +226,7 @@ export default function Cart(props) {
                                                 </tr>
                                                 <tr>
                                                     <th>
-                                                        Penerbit
+                                                        Publisher
                                                     </th>
                                                     <td>
                                                         : &nbsp; {item.penerbit}
@@ -239,7 +239,7 @@ export default function Cart(props) {
                                 </div>
                                     <div style={{display:"flex", flexDirection:"column"}}>
                                     <div className={classes['penutong']}>
-                                    <p> Buku sudah ditambahkan ke booking list!</p>
+                                    <p> This book has been added to the booking list!</p>
                                     <button className={classes['tong']} onClick={() => { removeItem(item.id); notify() }}><i class="fa fa-trash" aria-hidden="true"></i></button>
                                     </div>
                                     <div className={classes['hrline']}></div>
@@ -250,8 +250,8 @@ export default function Cart(props) {
                     </>
                 }
                 <div className={classes['buttonbatch']}>
-                    <Button className={classes.buttclose} onClick={props.onClose}><i class="fa fa-times" aria-hidden="true"></i> Tutup</Button>
-                    <Button className={classes.buttopen} onClick={showRulefunc} >{isEmpty ? "Ke Perpus!" : "Pesan !"}</Button>
+                    {/* <Button className={classes.buttclose} onClick={props.onClose}><i class="fa fa-times" aria-hidden="true"></i> Close </Button> */}
+                    <Button className={classes.buttopen} onClick={showRulefunc} >{isEmpty ? "To the Library!" : "Order !"}</Button>
                 </div>
             </Modal>}
             {
