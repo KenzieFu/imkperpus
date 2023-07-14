@@ -72,7 +72,7 @@ const gagal = () => toast.warning('Sorry, there was a mistake.', {
                                 </div>
                                 <div className={classes['content-input']}>
                                     <label htmlFor='pesan'>Message</label>
-                                    <textarea name="pesan" rows="16"></textarea>
+                                    <textarea name="pesan" rows="7"></textarea>
                                 </div>
                                 <button type="submit" onClick={(e)=>submitHandler(e)} className={classes['kirimbutton']}>Upload message</button>
                             </Form >
