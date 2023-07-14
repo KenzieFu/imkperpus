@@ -68,7 +68,7 @@ export const HomePage = () => {
             The Crown Library are a collection of materials, books or media that are accessible for use and not just for display purposes. The Crown Library serve as community centres, providing social interaction and learning opportunities.
             </div>
             <div className={classes['buttons']}>
-                <a href='/contactUs'  className={classes["main-button2"]}> Learn More </a>
+                <a href='/Library'  className={classes["main-button2"]}> Learn More </a>
             </div>
         </div>
 
