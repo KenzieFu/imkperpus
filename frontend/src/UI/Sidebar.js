@@ -18,7 +18,7 @@ export const Sidebar = () => {
           </ul>
             <div className={classes["sidedown"]}>
           <ul>
-            <img src='../assets/image1.png'></img>
+            <img src='../assets/student3.png'></img>
           </ul>
           </div>
         </nav>

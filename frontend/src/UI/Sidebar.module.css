@@ -1,18 +1,19 @@
 :root{
     --white:#ffffff;
+    --dablue: #222831;
     --blue:#2e55ba; 
-    --accentblack:rgb(58, 58, 58);
-    --red:#FF5959;
+    --accentblack:#313131;
+    --yellow:#FFD369;
+    --yellow:#FFD369;
     --addgray:#DBD0C0;
     --gray:#FAEEE0;
     --beige:#F9CF93;
-    --beige2-light:#fedaa7;
     --lbeige:#FAEEE0;
 
     --white-light:#ffffff;
     --blue-light:#2e55ba;
-    --accentblack-light:rgb(58, 58, 58);
-    --red-light:#FF5959;
+    --accentblack-light:#313131;
+    --yellow-light:#FFD369;
     --gray-light:#f4f1f1;
     --addgray-light:#e3e3e3;
     --beige-light:#F9CF93;
@@ -20,8 +21,8 @@
 
     --white-dark:#ffffff;
     --blue-dark:#2e55ba;
-    --accentblack-dark:rgb(58, 58, 58);
-    --red-dark:#FF5959;
+    --accentblack-dark:#313131;
+    --yellow-dark:#FFD369;
     --gray-dark:#f4f1f1;
     --addgray-dark:#e3e3e3;
     --beige-light:#F9CF93;
@@ -40,7 +41,6 @@
 
 .sidebar{
     background-color: #393E46;
-  
     height: 85vh;
     padding: 1vw 0;
     width: 5vw;
@@ -111,7 +111,7 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    height: 100%;
+    height: 30%;
 }
 
 .side-nav ul img{

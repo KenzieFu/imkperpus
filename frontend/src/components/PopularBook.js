@@ -14,14 +14,14 @@ export const PopularBook = (props) => {
     <>
     <div className={classes.popular}>
     <div className={classes.wibulu}> 
-      <h1>Buku Terpopuler</h1>
+      <h1>Popular Books</h1>
       <img src="./assets/anime-jump.gif" alt="" />
       </div>
     <ul>
         {daily}
         {!daily.length &&
           <div>
-            Sedang Tidak Tersedia
+            Currently Unavailable
           </div>
         }
     </ul>
