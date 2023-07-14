@@ -314,7 +314,7 @@ export const BookTablePage = () => {
           )}
         </Await>
       </Suspense>
-      {showDeleteModal && <DeleteModal id={currentId} onClose={closeModalHandler} />}
+      {showDeleteModal && <DeleteModal message={"menghapus"} id={currentId} onClose={closeModalHandler} />}
       {showDeleteRameModal && <DeleteRame onDelete={() =>{handleDeleteBanyak(selectedBook)}} onClose={closeDelRameModalHandler}/>}
       {location.state && <div>{location.state.message}</div>}
       <div className={classes['button-on']}>

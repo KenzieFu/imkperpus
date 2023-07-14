@@ -324,7 +324,7 @@ export const StudentPage = () => {
           )}
         </Await>
       </Suspense>
-      {showDeleteModal && <DeleteModal id={currentId} onClose={closeModalHandler} />}
+      {showDeleteModal && <DeleteModal message={"menghapus"} id={currentId} onClose={closeModalHandler} />}
       {showDeleteRameModal && <DeleteRame onDelete={() =>{handleDeleteBanyak(selectedSiswa)}} onClose={closeDelRameModalHandler}/>}
       {location.state && <div>{location.state.message}</div>}
       <div className={classes['button-on']}>

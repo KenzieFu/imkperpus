@@ -84,8 +84,9 @@ export async function action({ params, request }) {
     content_event:data.get("content_event"),
     tanggal_event:data.get("tanggal_event"),
     id_akun:data.get("id_akun"),
-    status:"Privat",
-    tipe:"Siswa"
+    status:"Publik",
+    tipe:"Siswa",
+    editable:"No"
   }
 
 

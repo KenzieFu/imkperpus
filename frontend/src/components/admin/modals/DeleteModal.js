@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import classes from '../../../pages/Admin/adminbatch.module.css';
 
-const notifyDelete = () => toast.success('Berhasil menghapus data!', {
+const notifyDelete = () => toast.success('Berhasil !', {
   position: "top-center",
   autoClose: 5000,
   hideProgressBar: false,
@@ -24,7 +24,7 @@ export const DeleteModal = (props) => {
   const submit =useSubmit();
 
   const isSubmitting = navigation.state === "submitting";
-
+  
 const startDeleteHandler=async(e)=>{
 
   submit(e.currentTarget,{method:"delete"});
@@ -41,7 +41,7 @@ const startDeleteHandler=async(e)=>{
            <div style={{marginLeft: "35px"}} >Apa anda yakin ingin {props.message} ini ?</div>
            <div className={classes['batchbut1']}>
              <div disabled={isSubmitting} onClick={props.onClose} className={classes['modbut-cel']} >Batalkan</div>
-             <button disabled={isSubmitting} onClick={(e)=>startDeleteHandler(e)} className={classes['modbut-del']}>{isSubmitting?"Loading...":"Hapus"}</button>
+             <button disabled={isSubmitting} onClick={(e)=>startDeleteHandler(e)} className={classes['modbut-del']}>{isSubmitting?"Loading...":"Konfirmasi"}</button>
            </div>
             </div>
          </Form>
