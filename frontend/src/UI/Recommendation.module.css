@@ -53,7 +53,7 @@
     display: block;
     background-size: cover;
     background-position-y: -4vw;
-    background-image: url(../../public/assets/BookCover.png);
+    background-image: url(../../public/assets/Rectangle128.png);
     height: 34vw;
     width: 97%;
     filter: brightness(60%);

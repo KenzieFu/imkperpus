@@ -1,21 +1,32 @@
 :root{
     --white:#ffffff;
+    --dablue: #222831;
     --blue:#2e55ba; 
-    --accentblack:rgb(58, 58, 58);
-    --red:#FF5959;
-    --gray:#f4f1f1;
+    --accentblack:#313131;
+    --yellow:#FFD369;
+    --yellow:#FFD369;
+    --addgray:#DBD0C0;
+    --gray:#FAEEE0;
+    --beige:#F9CF93;
+    --lbeige:#FAEEE0;
 
     --white-light:#ffffff;
     --blue-light:#2e55ba;
-    --accentblack-light:rgb(58, 58, 58);
-    --red-light:#FF5959;
+    --accentblack-light:#313131;
+    --yellow-light:#FFD369;
     --gray-light:#f4f1f1;
+    --addgray-light:#e3e3e3;
+    --beige-light:#F9CF93;
+    --lbeige-light:#FAEEE0;
 
     --white-dark:#ffffff;
     --blue-dark:#2e55ba;
-    --accentblack-dark:rgb(58, 58, 58);
-    --red-dark:#FF5959;
+    --accentblack-dark:#313131;
+    --yellow-dark:#FFD369;
     --gray-dark:#f4f1f1;
+    --addgray-dark:#e3e3e3;
+    --beige-light:#F9CF93;
+    --lbeige-light:#FAEEE0;
 }
 
 @media(prefers-color-scheme: dark){
@@ -98,7 +109,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--white-light);
+    background-color: none;
 }
 
 .search-box input{
@@ -109,14 +120,20 @@
     font-size: 1.2vw;
     outline: none;
     margin:0 0.74vw;
-    background-color: var(--white-light);
+    background-color: #393E46;
+    color: var(--yellow);
     padding-left: 1vw;
 }
 
+.search-box input::placeholder{
+    color: var(--yellow);
+}
 
 .main-button{
-    background: none;
-    color:var(--red-light);
+    background: var(--yellow);
+    height: 4vw;
+    width: 5vw;
+    color: #393E46;
     border: none;
     border-radius: 2.22vw;
     font-size: 1.5vw;
