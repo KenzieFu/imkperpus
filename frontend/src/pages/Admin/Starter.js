@@ -96,25 +96,9 @@ const Starter = () => {
         </Col>
       </Row>
       {/***Table ***/}
-      <Row>
-        <Col lg="12">
-          <ProjectTables />
-        </Col>
-      </Row>
+      
       {/***Blog Cards***/}
-      <Row>
-        {BlogData.map((blg, index) => (
-          <Col sm="6" lg="6" xl="3" key={index}>
-            <Blog
-              image={blg.image}
-              title={blg.title}
-              subtitle={blg.subtitle}
-              text={blg.description}
-              color={blg.btnbg}
-            />
-          </Col>
-        ))}
-      </Row>
+      
     </div>
   );
 };

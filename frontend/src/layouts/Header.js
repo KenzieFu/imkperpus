@@ -93,7 +93,7 @@ const Header = () => {
         <Nav className="me-auto" navbar>
           <NavItem>
             <div  style={{ color:"white" }}>
-              Welcome, User.
+              Welcome, Admin.
             </div>
           </NavItem>
           

@@ -36,7 +36,7 @@ export const DetailBuku = () => {
         setStock(prev=>!prev);
     }
     const submitHandler=(e)=>{
-      
+        e.preventDefault();
         submit(e.currentTarget,{method:stok?.stok?"PUT":"POST"});
         notifyStatus()
 
@@ -50,27 +50,27 @@ export const DetailBuku = () => {
             <div className={classes.infotable}>
                                     <table>
                                         <tr>
-                                            <td>Penulis</td>
+                                            <td style={{ color: "#3a3a3a", }}>Penulis</td>
                                             <td style={{ width: "5vw" }}>:</td>
                                             <td style={{ color: "#3a3a3a", fontWeight: "500", width: "20vw" }}>{bookDetail.pengarang}</td>
                                         </tr>
                                         <tr>
-                                            <td>Penerbit</td>
+                                            <td style={{ color: "#3a3a3a", }}>Penerbit</td>
                                             <td style={{ width: "5vw" }}>: &nbsp;</td>
                                             <td style={{ color: "#3a3a3a", fontWeight: "500", width: "15vw" }}>{bookDetail.penerbit}</td>
                                         </tr>
                                         <tr>
-                                            <td>Tahun</td>
+                                            <td style={{ color: "#3a3a3a", }}>Tahun</td>
                                             <td style={{ width: "5vw" }}>: &nbsp;</td>
                                             <td style={{ color: "#3a3a3a", fontWeight: "500", width: "15vw" }}>{bookDetail.tahun_terbit}</td>
                                         </tr>
                                         <tr>
-                                            <td>ISBN</td>
+                                            <td style={{ color: "#3a3a3a", }}>ISBN</td>
                                             <td style={{ width: "5vw" }}>: &nbsp;</td>
                                             <td style={{ color: "#3a3a3a", fontWeight: "500", width: "15vw" }}>{bookDetail.isbn}</td>
                                         </tr>
                                         <tr>
-                                            <td>Genre</td>
+                                            <td style={{ color: "#3a3a3a", }}>Genre</td>
                                             <td style={{ width: "5vw" }}>: &nbsp;</td>
                                             <td style={{ color: "#3a3a3a", fontWeight: "500", width: "15vw" }}>{bookDetail.kategori.nama_kategori}</td>
                                         </tr>
@@ -115,27 +115,27 @@ export const DetailBuku = () => {
                                 <div className={classes.infotable}>
                                     <table>
                                         <tr>
-                                            <td>Penulis</td>
+                                            <td style={{ color: "#3a3a3a", }}>Penulis</td>
                                             <td style={{ width: "5vw" }}>:</td>
                                             <td style={{ color: "#3a3a3a", fontWeight: "500", width: "20vw" }}>{loadedData.pengarang}</td>
                                         </tr>
                                         <tr>
-                                            <td>Penerbit</td>
+                                            <td style={{ color: "#3a3a3a", }}>Penerbit</td>
                                             <td style={{ width: "5vw" }}>: &nbsp;</td>
                                             <td style={{ color: "#3a3a3a", fontWeight: "500", width: "20vw" }}>{loadedData.penerbit}</td>
                                         </tr>
                                         <tr>
-                                            <td>Tahun</td>
+                                            <td style={{ color: "#3a3a3a", }}>Tahun</td>
                                             <td style={{ width: "5vw" }}>: &nbsp;</td>
                                             <td style={{ color: "#3a3a3a", fontWeight: "500", width: "20vw" }}>{loadedData.tahun_terbit}</td>
                                         </tr>
                                         <tr>
-                                            <td>ISBN</td>
+                                            <td style={{ color: "#3a3a3a", }}>ISBN</td>
                                             <td style={{ width: "5vw" }}>: &nbsp;</td>
                                             <td style={{ color: "#3a3a3a", fontWeight: "500", width: "20vw" }}>{loadedData.isbn}</td>
                                         </tr>
                                         <tr>
-                                            <td>Genre</td>
+                                            <td style={{ color: "#3a3a3a", }}>Genre</td>
                                             <td style={{ width: "5vw" }}>: &nbsp;</td>
                                             <td style={{ color: "#3a3a3a", fontWeight: "500", width: "20vw" }}>{loadedData.kategori.nama_kategori}</td>
                                         </tr>
@@ -148,7 +148,7 @@ export const DetailBuku = () => {
                                         {
                                             !stok &&
                                             <tr>
-                                                <td><button onClick={showHandler}>Buat Stok</button></td>
+                                                <td><button style={{ color:"black" }} onClick={showHandler}>Buat Stok</button></td>
                                             </tr>
                                         }
                                     </table>

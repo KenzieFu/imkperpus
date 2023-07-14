@@ -72,7 +72,7 @@ const gagal = () => toast.warning('Pesan Gagal Ditambahkan', {
                                 </div>
                                 <div className={classes['content-input']}>
                                     <label htmlFor='pesan'>Message</label>
-                                    <textarea name="pesan" rows="6"></textarea>
+                                    <textarea name="pesan" rows="16"></textarea>
                                 </div>
                                 <button type="submit" onClick={(e)=>submitHandler(e)} className={classes['kirimbutton']}>Kirim Pesan</button>
                             </Form >

@@ -207,7 +207,7 @@ export const DaftarBookingBuku = () => {
           )}
         </Await>
       </Suspense>
-      {showDeleteModal && <DeleteModal id={currentId} onClose={closeModalHandler} />}
+      {showDeleteModal && <DeleteModal message={"menyetujui"} id={currentId} onClose={closeModalHandler} />}
       {location.state && <div>{location.state.message}</div>}
     </>
   );

@@ -38,7 +38,7 @@ const startDeleteHandler=async(e)=>{
            <Form method='delete' className={classes['form-alert']}>
             <div className={classes['alert-grup']}>
            <input hidden type="number" id='id' name='id' value={props.id} />
-           <div style={{marginLeft: "35px"}} >Apa anda yakin ingin menghapus ini ?</div>
+           <div style={{marginLeft: "35px"}} >Apa anda yakin ingin {props.message} ini ?</div>
            <div className={classes['batchbut1']}>
              <div disabled={isSubmitting} onClick={props.onClose} className={classes['modbut-cel']} >Batalkan</div>
              <button disabled={isSubmitting} onClick={(e)=>startDeleteHandler(e)} className={classes['modbut-del']}>{isSubmitting?"Loading...":"Hapus"}</button>

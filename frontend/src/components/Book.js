@@ -58,7 +58,7 @@ export const Book = ({book}) => {
                     }
                   
                     {status.hak_akses === "Petugas" &&
-                      <button onClick={camHandler}>Selesaikan</button>
+                      <button className={classes["book-info_button"]} onClick={camHandler}>Selesaikan</button>
                     }
 
                 </div>

@@ -79,7 +79,7 @@ export const BookPesan = ({book,rerender}) => {
                   }
                   {
                     status.hak_akses ==="Petugas" &&
-                    <button onClick={camHandler} >Konfirmasi Pesanan</button>
+                    <button className={classes["book-info_button"]} onClick={camHandler} >Konfirmasi Pesanan</button>
                   }
                    
 

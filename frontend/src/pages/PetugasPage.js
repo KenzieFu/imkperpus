@@ -3,10 +3,10 @@ import classes from "./PetugasPage.module.css"
 import { NavLink, Outlet, useNavigate } from 'react-router-dom'
 import { json } from 'react-router-dom'
 import { authActions } from '../features/auth/authSlice'
-import { useDispatch } from 'react-redux'
-
+import { useDispatch, useSelector } from 'react-redux'
 
 export const PetugasPage = () => {
+  const user=useSelector(state=>state.auth.user);
   const dispatch=useDispatch();
   const navigate=useNavigate();
   const  logoutHandler=async(e)=>{
@@ -59,7 +59,7 @@ export const PetugasPage = () => {
             <div className={classes['upcont']}>
             <div className={classes['topcont']}>
             <h1>Dashboard <i class="fa fa-pie-chart" aria-hidden="true"></i> </h1>
-            <p> Welcome back, kenjod</p>
+            <p> Welcome back, {user.username}</p>
 
             <div className={classes['lgroup']}>
               <button className={classes['logbut']} onClick={logoutHandler}>Logout</button>
@@ -67,7 +67,7 @@ export const PetugasPage = () => {
             </div>
 
             <div className={classes['titl2']}>
-            <span>Website untuk petugas <br></br>Methodist Charles Wesley</span> 
+            <span>Website untuk petugas <br></br>Crown Library</span> 
             <img src="/assets/logopng.png" className={classes['logoimg']} alt="" />
             </div>
             </div>

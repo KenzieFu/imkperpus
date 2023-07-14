@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Logo = () => {
   return (
     <Link style={{ textDecoration:"none" }} to="/admin">
-        <div>MCW</div>
+        <div>Crown</div>
     </Link>
   );
 };

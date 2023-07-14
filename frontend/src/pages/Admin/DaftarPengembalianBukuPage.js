@@ -51,7 +51,7 @@ export const DaftarPengembalianBukuPage = () => {
     {
       id: "nama_siswa",
       name: <div className={classes["data-row"]}>Nama Siswa</div>,
-      selector: (row) => <div className={classes["data-row"]}>{row.peminjaman.siswa.nama_lengkap}</div>,
+      selector: (row) => <div className={classes["data-row"]}>{row?.peminjaman?.siswa?.nama_lengkap}</div>,
       accessor: "nama_siswa",
       sortable: true,
       headerStyle: {
@@ -64,7 +64,7 @@ export const DaftarPengembalianBukuPage = () => {
     {
       id: "judul_buku",
       name: <div className={classes["data-row"]}>Judul Buku</div>,
-      selector: (row) => <div className={classes["data-row"]}>{row.peminjaman.buku.judul_buku}</div>,
+      selector: (row) => <div className={classes["data-row"]}>{row?.peminjaman?.buku?.judul_buku}</div>,
       accessor: "judul_buku",
       sortable: true,
       headerStyle: {
@@ -77,7 +77,7 @@ export const DaftarPengembalianBukuPage = () => {
     {
       id: "tanggal_pinjam",
       name: <div className={classes['data-row']}>Tanggal Pinjam</div>,
-      selector: (row) => <div className={classes['data-row']}>{row.peminjaman.tanggal_pinjam}</div>,
+      selector: (row) => <div className={classes['data-row']}>{row?.peminjaman?.tanggal_pinjam}</div>,
       accessor: "tanggal_pinjam",
       sortable: true,
       headerStyle: {
@@ -90,7 +90,7 @@ export const DaftarPengembalianBukuPage = () => {
     {
       id: "tanggal_kembali",
       name: <div className={classes['data-row']}>Tanggal Dikembalikan</div>,
-      selector: (row) => <div className={classes['data-row']}>{row.peminjaman.tanggal_kembali}</div>,
+      selector: (row) => <div className={classes['data-row']}>{row?.peminjaman?.tanggal_kembali}</div>,
       accessor: "tanggal_kembali",
       sortable: true,
       headerStyle: {
@@ -103,7 +103,7 @@ export const DaftarPengembalianBukuPage = () => {
     {
       id: "tanggal_pengembalian",
       name: <div className={classes['data-row']}>Tanggal Pengembalian</div>,
-      selector: (row) => <div className={classes['data-row']}>{row.tanggal_pengembalian}</div>,
+      selector: (row) => <div className={classes['data-row']}>{row?.tanggal_pengembalian}</div>,
       accessor: "tanggal_pengembalian",
       sortable: true,
       headerStyle: {
@@ -116,7 +116,7 @@ export const DaftarPengembalianBukuPage = () => {
     {
       id: "status_kembali",
       name: <div className={classes['data-row']}>Status</div>,
-      selector: (row) => <div className={classes['data-row']}>{row.status}</div>,
+      selector: (row) => <div className={classes['data-row']}>{row?.status}</div>,
       accessor: "status_kembali",
       sortable: true,
       headerStyle: {
@@ -124,33 +124,10 @@ export const DaftarPengembalianBukuPage = () => {
         textAlign: "center",
         justifyContent: "center",
       },
-      color: ((row) => row.status === "Tepat Waktu") ? "Green" : "Red",
+      color: ((row) => row?.status === "Tepat Waktu") ? "Green" : "Red",
       width: "15%",
     },
-    {
-      id: "button",
-      name: <div className={classes['data-row']}>Aksi</div>,
-      width: "20%",
-      cell: (row) => (
-        <div style={{ margin: "0 0" }} className="action-buttons">
-          <input type="hidden" id="row" />
-          <span onClick={() => showModalHandler(row.peminjaman.id_peminjaman)} className="action-check">
-            {" "}
-            <i class="bi bi-check-lg"> Setujui</i>
-          </span>
-        </div>
-      ),
-      headerStyle: {
-        fontWeight: "bold",
-        textAlign: "center",
-        justifyContent: "center",
-        alignItems: "center",
-      },
-      ignoreRowClick: true,
-      allowOverflow: true,
-      selector: (row) => row.button,
-      button: true,
-    },
+   
   ];
 
   return (
@@ -261,13 +238,13 @@ export const DaftarPengembalianBukuPage = () => {
               data={loadedData.filter((item) => {
                 const keyword=searchTerm.toLowerCase();
                 return(
-                  item.peminjaman.siswa.nama_lengkap.toLowerCase().includes(keyword) ||
-                  item.peminjaman.buku.judul_buku.toLowerCase().includes(keyword) ||
-                  item.peminjaman.tanggal_pinjam.toLowerCase().includes(keyword) ||
-                  item.peminjaman.tanggal_kembali.toLowerCase().includes(keyword) ||
-                  item.tanggal_pengembalian.toLowerCase().includes(keyword) ||
-                  item.tanggal_pengembalian.toLowerCase().includes(keyword) ||
-                  item.status.toLowerCase().includes(keyword) 
+                  item?.peminjaman?.siswa?.nama_lengkap.toLowerCase().includes(keyword) ||
+                  item?.peminjaman?.buku?.judul_buku.toLowerCase().includes(keyword) ||
+                  item?.peminjaman?.tanggal_pinjam?.toLowerCase().includes(keyword) ||
+                  item?.peminjaman?.tanggal_kembali?.toLowerCase().includes(keyword) ||
+                  item?.tanggal_pengembalian?.toLowerCase().includes(keyword) ||
+                  item?.tanggal_pengembalian?.toLowerCase().includes(keyword) ||
+                  item?.status?.toLowerCase().includes(keyword) 
                 )
               })}
               columns={columns}
@@ -276,7 +253,7 @@ export const DaftarPengembalianBukuPage = () => {
           )}
         </Await>
       </Suspense>
-      {showDeleteModal && <DeleteModal id={currentId} onClose={closeModalHandler} />}
+      {showDeleteModal && <DeleteModal  id={currentId} onClose={closeModalHandler} />}
       {location.state && <div>{location.state.message}</div>}
     </>
   );
@@ -303,7 +280,7 @@ const loadKembali = async () => {
 
 export const loader = () => {
   return defer({
-    daftarPengembalian: loadKembali()
+    daftarPengembalian:  loadKembali()
   })
 }
 

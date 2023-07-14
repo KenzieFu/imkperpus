@@ -213,7 +213,7 @@ const BookDetail = () => {
                         <div className={classes.covertop}>
                             <div className={classes['texttop']}>
                                 <h1>Yuk Baca Buku!</h1>
-                                <span>Perpustakaan Methodist Charles Wesley tersedia 100+ buku yang bisa diakses kapan saja.</span>
+                              
                             </div>
                         </div>
                         <div className={classes.card}>
