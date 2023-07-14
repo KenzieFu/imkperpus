@@ -26,7 +26,7 @@ export async function action({ params, request }) {
   const myData=JSON.parse(data.get("data"));
   const time=new Date().toTimeString()
   console.log(myData.nisn);
-  const response = await fetch('http://localhost:8080/admin-perpustakaan-methodist-cw/absensi-keluar/'+myData.nisn, {
+  const response = await fetch('http://localhost:8080/admin-perpustakaan-crown/absensi-keluar/'+myData.nisn, {
     method: method,
     headers:{
       "Content-Type":"application/json",

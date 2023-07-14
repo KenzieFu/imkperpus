@@ -57,7 +57,7 @@ export const StudentPage = () => {
 
     try {
 
-      const response = await fetch('http://localhost:8080/admin-perpustakaan-methodist-cw/siswa-multiple', {
+      const response = await fetch('http://localhost:8080/admin-perpustakaan-crown/siswa-multiple', {
         method: 'delete',
         headers: {
           'Content-Type': 'application/json',
@@ -336,7 +336,7 @@ export const StudentPage = () => {
 };
 
 const loadStudents = async () => {
-  const response = await fetch("http://localhost:8080/admin-perpustakaan-methodist-cw/siswa");
+  const response = await fetch("http://localhost:8080/admin-perpustakaan-crown/siswa");
   console.log(response);
   if (!response.ok) {
     throw json(
@@ -363,7 +363,7 @@ export async function action({ params, request }) {
   const method = request.method;
   const data = await request.formData();
   console.log(data);
-  const response = await fetch("http://localhost:8080/admin-perpustakaan-methodist-cw/siswa/" + data.get("id"), {
+  const response = await fetch("http://localhost:8080/admin-perpustakaan-crown/siswa/" + data.get("id"), {
     method: method,
     headers: {
       Authorization: "Bearer",

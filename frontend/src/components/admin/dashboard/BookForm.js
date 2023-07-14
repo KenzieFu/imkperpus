@@ -31,8 +31,8 @@ function BookForm({method,book}) {
 
   const fetchOptions = async () => {
     try {
-      const response1 = await fetch('http://localhost:8080/admin-perpustakaan-methodist-cw/buku'); // Replace with your API endpoint for table 1
-      const response2 = await fetch('http://localhost:8080/admin-perpustakaan-methodist-cw/kategori'); // Replace with your API endpoint for table 2
+      const response1 = await fetch('http://localhost:8080/admin-perpustakaan-crown/buku'); // Replace with your API endpoint for table 1
+      const response2 = await fetch('http://localhost:8080/admin-perpustakaan-crown/kategori'); // Replace with your API endpoint for table 2
 
       const data1 = await response1.json();
       const data2 = await response2.json();
@@ -174,11 +174,11 @@ export async function action({ request, params }) {
   console.log(params.bookId);
   console.log(bukuData);
 
-  let url = 'http://localhost:8080/admin-perpustakaan-methodist-cw/buku'
+  let url = 'http://localhost:8080/admin-perpustakaan-crown/buku'
 
   if (method === 'PUT') {
     const id = params.bookId;
-    url = 'http://localhost:8080/admin-perpustakaan-methodist-cw/buku/' + id;
+    url = 'http://localhost:8080/admin-perpustakaan-crown/buku/' + id;
   }
 
 

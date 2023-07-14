@@ -120,7 +120,7 @@ const renderHandler=()=>{
 
 const loadReturned = async (id) => {
   const data =getUserCredentials()
-  const response = await fetch("http://localhost:8080/perpustakaan-methodist-cw/pengembalian",{
+  const response = await fetch("http://localhost:8080/perpustakaan-crown/pengembalian",{
     method:"GET",
     headers:{
       "Authorization":"Bearer "+data.accessToken
@@ -141,11 +141,11 @@ const loadReturned = async (id) => {
     return resData;
 
 }
-// http://localhost:8080/perpustakaan-methodist-cw/pemesanan-buku/(id_pemesanan}
+// http://localhost:8080/perpustakaan-crown/pemesanan-buku/(id_pemesanan}
 const loadBorrowed = async (id) => {
   const data = getUserCredentials();
   console.log(data.accessToken)
-  const response = await fetch("http://localhost:8080/perpustakaan-methodist-cw/peminjaman-siswa-by-user",{
+  const response = await fetch("http://localhost:8080/perpustakaan-crown/peminjaman-siswa-by-user",{
     method:"GET",
     headers:{
       "Authorization":"Bearer "+data.accessToken
@@ -170,7 +170,7 @@ const loadBorrowed = async (id) => {
 
 
 const loadBooking = async (id) => {
-  const response = await fetch("http://localhost:8080/perpustakaan-methodist-cw/pemesanan-buku/")
+  const response = await fetch("http://localhost:8080/perpustakaan-crown/pemesanan-buku/")
   console.log(response);
   if (!response.ok) {
     throw json(
@@ -208,7 +208,7 @@ export async function loader(id) {
 }
 
 export const action=async({params,request})=>{
-  let url="http://localhost:8080/perpustakaan-methodist-cw/pemesanan-batal/";
+  let url="http://localhost:8080/perpustakaan-crown/pemesanan-batal/";
   const data=await request.formData()
 
   const response = await fetch(url+ data.get("id_pemesanan"), {

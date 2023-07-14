@@ -73,7 +73,7 @@ export const ScanBarcode = ({onClose,item,tipe}) => {
     const createPinjamHandler=async(code)=>{
       console.log(code);
       console.log(item.id_siswa);
-            const response = await fetch('http://localhost:8080/perpustakaan-methodist-cw/peminjamanBarcode', {
+            const response = await fetch('http://localhost:8080/perpustakaan-crown/peminjamanBarcode', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -105,7 +105,7 @@ export const ScanBarcode = ({onClose,item,tipe}) => {
 
 
     const completeHandler=async(text)=>{
-      const response = await fetch('http://localhost:8080/admin-perpustakaan-methodist-cw/peminjaman/' +item.id_peminjaman, {
+      const response = await fetch('http://localhost:8080/admin-perpustakaan-crown/peminjaman/' +item.id_peminjaman, {
         method: "POST",
         headers: {
           "Authorization": "Bearer",
@@ -132,7 +132,7 @@ export const ScanBarcode = ({onClose,item,tipe}) => {
 
     const bookingHandler=async()=>{
        
-      const response = await fetch('http://localhost:8080/perpustakaan-methodist-cw/pemesanan-buku/' +item.id_pemesanan , {
+      const response = await fetch('http://localhost:8080/perpustakaan-crown/pemesanan-buku/' +item.id_pemesanan , {
     method: "Delete",
     headers: {
       "Authorization": "Bearer"
@@ -216,7 +216,7 @@ export const ScanBarcode = ({onClose,item,tipe}) => {
   const method = request.method;
   const data = await request.formData();
   console.log(data);
-  const response = await fetch('http://localhost:8080/perpustakaan-methodist-cw/pemesanan-buku/' + data.get('id'), {
+  const response = await fetch('http://localhost:8080/perpustakaan-crown/pemesanan-buku/' + data.get('id'), {
     method: method,
     headers: {
       "Authorization": "Bearer"
@@ -245,7 +245,7 @@ export async function action({ params, request }) {
   const method = request.method;
   const data = await request.formData();
   console.log(data);
-  const response = await fetch('http://localhost:8080/admin-perpustakaan-methodist-cw/peminjaman/' + data.get('id'), {
+  const response = await fetch('http://localhost:8080/admin-perpustakaan-crown/peminjaman/' + data.get('id'), {
     method: method,
     headers: {
       "Authorization": "Bearer",

@@ -33,7 +33,7 @@ export async function action({ params, request }) {
   console.log(currentDate);
   console.log(time);
   console.log(myData.nisn);
-  const response = await fetch('http://localhost:8080/admin-perpustakaan-methodist-cw/absensi', {
+  const response = await fetch('http://localhost:8080/admin-perpustakaan-crown/absensi', {
     method: method,
     headers:{
       "Content-Type":"application/json",

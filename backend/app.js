@@ -107,8 +107,8 @@ app.use(cors(corsOptions));
 // }))
 
 // app.use('/feed', feedRoutes);
-// tambah route http://localhost:8080/admin-perpustakaan-methodist-cw/buku --> bukuController.createBook
-app.post('/admin-perpustakaan-methodist-cw/buku', upload.single("gambar_buku"), async (req, res, next) => {
+// tambah route http://localhost:8080/admin-perpustakaan-crown/buku --> bukuController.createBook
+app.post('/admin-perpustakaan-crown/buku', upload.single("gambar_buku"), async (req, res, next) => {
  
    console.log(req.file);
    console.log(req.body)
@@ -158,9 +158,9 @@ app.post('/admin-perpustakaan-methodist-cw/buku', upload.single("gambar_buku"), 
   }
 });
 app.use("/auth", authRoutes);
-app.use("/perpustakaan-methodist-cw", perpustakaanRoutes);
-app.use("/admin-perpustakaan-methodist-cw", adminRoutes);
-
+app.use("/perpustakaan-crown", perpustakaanRoutes);
+app.use("/admin-perpustakaan-crown", adminRoutes);
+/* perpustakaan-crown */
 app.use((error, req, res, next) => {
   console.log(error);
   const status = error.statusCode || 500;

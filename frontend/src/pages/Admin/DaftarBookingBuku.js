@@ -215,7 +215,7 @@ export const DaftarBookingBuku = () => {
 
 
 const loadBooking = async () => {
-  const response = await fetch("http://localhost:8080/perpustakaan-methodist-cw/pemesanan-buku")
+  const response = await fetch("http://localhost:8080/perpustakaan-crown/pemesanan-buku")
   console.log(response);
   if (!response.ok) {
     throw json(
@@ -243,7 +243,7 @@ export async function action({ params, request }) {
   const method = request.method;
   const data = await request.formData();
   console.log(data);
-  const response = await fetch('http://localhost:8080/perpustakaan-methodist-cw/pemesanan-buku/' + data.get('id'), {
+  const response = await fetch('http://localhost:8080/perpustakaan-crown/pemesanan-buku/' + data.get('id'), {
     method: method,
     headers: {
       "Authorization": "Bearer"

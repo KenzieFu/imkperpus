@@ -127,7 +127,7 @@ const renderHandler=()=>{
 
 const loadReturned = async (id) => {
 
-  const response = await fetch("http://localhost:8080/perpustakaan-methodist-cw/pengembalian/" + id)
+  const response = await fetch("http://localhost:8080/perpustakaan-crown/pengembalian/" + id)
   console.log(response);
   if (!response.ok) {
     throw json(
@@ -143,9 +143,9 @@ const loadReturned = async (id) => {
     return resData;
 
 }
-// http://localhost:8080/perpustakaan-methodist-cw/pemesanan-buku/(id_pemesanan}
+// http://localhost:8080/perpustakaan-crown/pemesanan-buku/(id_pemesanan}
 const loadBorrowed = async (id) => {
-  const response = await fetch("http://localhost:8080/perpustakaan-methodist-cw/peminjaman-siswa/"+id)
+  const response = await fetch("http://localhost:8080/perpustakaan-crown/peminjaman-siswa/"+id)
   console.log(response);
   if (!response.ok) {
     throw json(
@@ -163,7 +163,7 @@ const loadBorrowed = async (id) => {
 }
 
 const loaderSiswa=async(id)=>{
-    const response= await fetch("http://localhost:8080/admin-perpustakaan-methodist-cw/siswa/"+id);
+    const response= await fetch("http://localhost:8080/admin-perpustakaan-crown/siswa/"+id);
     console.log(response);
     if (!response.ok) {
       throw json(
@@ -182,7 +182,7 @@ const loaderSiswa=async(id)=>{
 
 
 const loadBooking = async (id) => {
-  const response = await fetch("http://localhost:8080/perpustakaan-methodist-cw/pemesanan-buku")
+  const response = await fetch("http://localhost:8080/perpustakaan-crown/pemesanan-buku")
   console.log(response);
   if (!response.ok) {
     throw json(
@@ -226,7 +226,7 @@ export async function loader({params}) {
 }
 
 export const action=async({params,request})=>{
-  let url="http://localhost:8080/perpustakaan-methodist-cw/pemesanan-batal/";
+  let url="http://localhost:8080/perpustakaan-crown/pemesanan-batal/";
   const data=await request.formData()
 
   const response = await fetch(url+ data.get("id_pemesanan"), {
@@ -254,7 +254,7 @@ export const action=async({params,request})=>{
 /* const handleCreate = async () => {
   try {
 
-    const response = await fetch('http://localhost:8080/admin-perpustakaan-methodist-cw/peminjaman', {
+    const response = await fetch('http://localhost:8080/admin-perpustakaan-crown/peminjaman', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -292,7 +292,7 @@ export async function action({ params, request }) {
   const method = request.method;
   const data = await request.formData();
   console.log(data);
-  const response = await fetch('http://localhost:8080/admin-perpustakaan-methodist-cw/peminjaman/' + data.get('id'), {
+  const response = await fetch('http://localhost:8080/admin-perpustakaan-crown/peminjaman/' + data.get('id'), {
     method: method,
     headers: {
       "Authorization": "Bearer",

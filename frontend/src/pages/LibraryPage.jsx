@@ -121,7 +121,7 @@ export const LibraryPage = () => {
 
 const loadBooks=async ()=>{
 
-  const response = await fetch("http://localhost:8080/perpustakaan-methodist-cw/buku-perpus")
+  const response = await fetch("http://localhost:8080/perpustakaan-crown/buku-perpus")
   console.log(response);
   if(!response.ok)
   {
@@ -139,7 +139,7 @@ const loadBooks=async ()=>{
 }
 
 const loadGenre=async ()=>{
-  const response = await fetch("http://localhost:8080/perpustakaan-methodist-cw/kategori")
+  const response = await fetch("http://localhost:8080/perpustakaan-crown/kategori")
   console.log(response);
   if(!response.ok)
   {
@@ -157,7 +157,7 @@ const loadGenre=async ()=>{
 }
 
 const loadPopular=async()=>{
-  const response = await fetch("http://localhost:8080/perpustakaan-methodist-cw/jumlah-dipinjam");
+  const response = await fetch("http://localhost:8080/perpustakaan-crown/jumlah-dipinjam");
   console.log(response);
   if(!response.ok)
   {

@@ -31,7 +31,7 @@ export async function action({ params, request }) {
     const myData=JSON.parse(data.get("data"))?JSON.parse(data.get("data")):null;
     console.log(myData.id_siswa)
     console.log("halooo")
-    const response=await fetch("http://localhost:8080/admin-perpustakaan-methodist-cw/siswa/"+myData.id_siswa);
+    const response=await fetch("http://localhost:8080/admin-perpustakaan-crown/siswa/"+myData.id_siswa);
 
     if(response.status === 501)
     {

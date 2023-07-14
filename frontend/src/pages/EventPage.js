@@ -53,7 +53,7 @@ export const EventPage = () => {
 
 const loadEvents=async ()=>{
  
-  const response = await fetch(" http://localhost:8080/admin-perpustakaan-methodist-cw/event")
+  const response = await fetch(" http://localhost:8080/admin-perpustakaan-crown/event")
   console.log(response);
   if(!response.ok)
   {
@@ -100,10 +100,10 @@ const selectedEvent=event
   
   let url="";
   let errorMessage="";
-  if(type==="create"){url="http://localhost:8080/perpustakaan-methodist-cw/event";errorMessage="Event gagal dibuat.";console.log("Create")}
-  else if(method === "DELETE"){url="http://localhost:8080/admin-perpustakaan-methodist-cw/event/"+data.get("id_event");
+  if(type==="create"){url="http://localhost:8080/perpustakaan-crown/event";errorMessage="Event gagal dibuat.";console.log("Create")}
+  else if(method === "DELETE"){url="http://localhost:8080/admin-perpustakaan-crown/event/"+data.get("id_event");
   errorMessage="Event Gagal Terhapus.";console.log("Delete")}
-  else if(method === "PUT"){url="http://localhost:8080/perpustakaan-methodist-cw/event/"+data.get("id_event");
+  else if(method === "PUT"){url="http://localhost:8080/perpustakaan-crown/event/"+data.get("id_event");
   errorMessage="Event Gagal Teredit.";console.log("Update");}
   console.log("My Data")
   console.log(data);

@@ -43,7 +43,7 @@ export const KonfirmasiData = () => {
     setShowConfirm(true);
   }
 
-  let url = 'http://localhost:8080/admin-perpustakaan-methodist-cw/calon-siswa';
+  let url = 'http://localhost:8080/admin-perpustakaan-crown/calon-siswa';
 
  const [isSubmitted, setIsSubmitted] = useState(false)
 

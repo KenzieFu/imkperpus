@@ -90,12 +90,13 @@
     padding-left: 8vw;
     width: 30vw;
     font-size: 1vw;
+    color: black;
 }
 
 .right-footer h1{
     font-size: 1.7vw;
     line-height: 3vw;
-    color: var(--accentblack);
+  
 }
 
 .hori{

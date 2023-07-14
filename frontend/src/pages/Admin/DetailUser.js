@@ -122,7 +122,7 @@ export const DetailUser = () => {
 
 
 const loadUser=async (id)=>{
-    const response = await fetch("http://localhost:8080/admin-perpustakaan-methodist-cw/akun/"+id)
+    const response = await fetch("http://localhost:8080/admin-perpustakaan-crown/akun/"+id)
     console.log(response);
     if(!response.ok)
     {

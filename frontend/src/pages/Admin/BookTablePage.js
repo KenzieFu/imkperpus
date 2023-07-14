@@ -91,7 +91,7 @@ export const BookTablePage = () => {
 
     try {
 
-      const response = await fetch(' http://localhost:8080/admin-perpustakaan-methodist-cw/buku-multiple', {
+      const response = await fetch(' http://localhost:8080/admin-perpustakaan-crown/buku-multiple', {
         method: 'delete',
         headers: {
           'Content-Type': 'application/json',
@@ -327,7 +327,7 @@ export const BookTablePage = () => {
 
 
 const loadBooks = async () => {
-  const response = await fetch("http://localhost:8080/admin-perpustakaan-methodist-cw/buku");
+  const response = await fetch("http://localhost:8080/admin-perpustakaan-crown/buku");
   console.log(response);
   if (!response.ok) {
     throw json(
@@ -343,7 +343,7 @@ const loadBooks = async () => {
 };
 
 const loadStocks=async()=>{
-  const response = await fetch("http://localhost:8080/perpustakaan-methodist-cw/buku-perpus");
+  const response = await fetch("http://localhost:8080/perpustakaan-crown/buku-perpus");
   if (!response.ok) {
     throw json(
       { message: "Could not fetch books." },
@@ -373,7 +373,7 @@ export async function action({ params, request }) {
   const method = request.method;
   const data = await request.formData();
   console.log(data);
-  const response = await fetch("http://localhost:8080/admin-perpustakaan-methodist-cw/buku/" + data.get("id"), {
+  const response = await fetch("http://localhost:8080/admin-perpustakaan-crown/buku/" + data.get("id"), {
     method: method,
     headers: {
       Authorization: "Bearer",

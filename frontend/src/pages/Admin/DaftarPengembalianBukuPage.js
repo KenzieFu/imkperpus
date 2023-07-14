@@ -261,7 +261,7 @@ export const DaftarPengembalianBukuPage = () => {
 
 
 const loadKembali = async () => {
-  const response = await fetch("http://localhost:8080/admin-perpustakaan-methodist-cw/pengembalian")
+  const response = await fetch("http://localhost:8080/admin-perpustakaan-crown/pengembalian")
   console.log(response);
   if (!response.ok) {
     throw json(
@@ -289,7 +289,7 @@ export async function action({ params, request }) {
   const method = request.method;
   const data = await request.formData();
   console.log(data);
-  const response = await fetch('http://localhost:8080/admin-perpustakaan-methodist-cw/pengembalian/' + data.get('id'), {
+  const response = await fetch('http://localhost:8080/admin-perpustakaan-crown/pengembalian/' + data.get('id'), {
     method: method,
     headers: {
       "Authorization": "Bearer"

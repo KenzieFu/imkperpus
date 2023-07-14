@@ -145,7 +145,7 @@ export const AbsensiPage = () => {
 
 const loaderAbsensi=async()=>{
 
-    const response = await fetch("http://localhost:8080/admin-perpustakaan-methodist-cw/absensi")
+    const response = await fetch("http://localhost:8080/admin-perpustakaan-crown/absensi")
     console.log(response);
     if(!response.ok)
     {
@@ -178,7 +178,7 @@ export async function action({ params, request }) {
 
   const time=new Date().toTimeString()
 
-  const response = await fetch('http://localhost:8080/admin-perpustakaan-methodist-cw/absensi-keluar-manual/'+data.get("id_absensi"), {
+  const response = await fetch('http://localhost:8080/admin-perpustakaan-crown/absensi-keluar-manual/'+data.get("id_absensi"), {
     method: method,
     headers:{
       "Content-Type":"application/json",

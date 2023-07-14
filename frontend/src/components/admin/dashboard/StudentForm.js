@@ -164,11 +164,11 @@ export async function action({ request, params }) {
 
   };
 
-  let url = 'http://localhost:8080/admin-perpustakaan-methodist-cw/siswa';
+  let url = 'http://localhost:8080/admin-perpustakaan-crown/siswa';
 
   if (method === 'PUT') {
     const id = params.idSiswa;
-    url = 'http://localhost:8080/admin-perpustakaan-methodist-cw/siswa/' + id;
+    url = 'http://localhost:8080/admin-perpustakaan-crown/siswa/' + id;
   }
 
   const response = await fetch(url, {

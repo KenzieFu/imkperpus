@@ -102,7 +102,7 @@ export const UserPage = () => {
 
     try {
 
-      const response = await fetch('  http://localhost:8080/admin-perpustakaan-methodist-cw/akun', {
+      const response = await fetch('  http://localhost:8080/admin-perpustakaan-crown/akun', {
         method: 'delete',
         headers: {
           'Content-Type': 'application/json',
@@ -137,7 +137,7 @@ export const UserPage = () => {
   };
   const handleUpdateStatusAktif = async (id) => {
     try {
-      const response = await fetch('http://localhost:8080/admin-perpustakaan-methodist-cw/akun-aktivasi', {
+      const response = await fetch('http://localhost:8080/admin-perpustakaan-crown/akun-aktivasi', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -168,7 +168,7 @@ export const UserPage = () => {
 
     try {
 
-      const response = await fetch('http://localhost:8080/admin-perpustakaan-methodist-cw/akun-aktivasi', {
+      const response = await fetch('http://localhost:8080/admin-perpustakaan-crown/akun-aktivasi', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -402,7 +402,7 @@ export const UserPage = () => {
 };
 
 const loadAkuns = async () => {
-  const response = await fetch("http://localhost:8080/admin-perpustakaan-methodist-cw/akun");
+  const response = await fetch("http://localhost:8080/admin-perpustakaan-crown/akun");
   console.log(response);
   if (!response.ok) {
     throw json(
@@ -430,7 +430,7 @@ export async function action({ params, request }) {
   const method = request.method;
   const data = await request.formData();
   console.log(data);
-  const response = await fetch("http://localhost:8080/admin-perpustakaan-methodist-cw/akun/" + data.get("id"), {
+  const response = await fetch("http://localhost:8080/admin-perpustakaan-crown/akun/" + data.get("id"), {
     method: method,
     headers: {
       Authorization: "Bearer",

@@ -26,24 +26,7 @@ export const BookPesan = ({book,rerender}) => {
     formData.append("id_pemesanan",id)
     submit(formData,{method:"DELETE"});
     handleModal();
-    /* let url="http://localhost:8080/perpustakaan-methodist-cw/pemesanan-batal/";
-    const response = await fetch(url+ id, {
-      method: "DELETE",
-      headers: {
-        Authorization: "Bearer",
-      },
-    });
   
-    if (!response.ok) {
-      throw json(
-        { message: "Could not delete Item." },
-        {
-          status: 500,
-        }
-      );
-    }
-
-    handleModal(); */
   }
   console.log(showConfirm)
   const handleModal=()=>{
