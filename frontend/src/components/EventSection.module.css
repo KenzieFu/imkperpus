@@ -128,12 +128,17 @@
 }
 
 .crtbut {
-    color: var(--green-dark);
+    color: black;
+    font-weight: bolder;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 20px;
+    padding: 10px;
+    background-color:#FFD369 ;
+
 }
 .crtbut:hover {
-    background-color: var(--green-light);
-    color: var(--white-light);
+    background-color: white;
+    color: black;
     transform: translateY(-0.3vw);
     text-decoration: none;
     border-color: var(--green-light);
