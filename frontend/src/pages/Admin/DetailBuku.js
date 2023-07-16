@@ -51,27 +51,27 @@ export const DetailBuku = () => {
                                     <table>
                                         <tr>
                                             <td style={{ color: "#3a3a3a", }}>Penulis</td>
-                                            <td style={{ width: "5vw" }}>:</td>
+                                            <td style={{ color: "#3a3a3a",width: "5vw" }}>: &nbsp;</td>
                                             <td style={{ color: "#3a3a3a", fontWeight: "500", width: "20vw" }}>{bookDetail.pengarang}</td>
                                         </tr>
                                         <tr>
                                             <td style={{ color: "#3a3a3a", }}>Penerbit</td>
-                                            <td style={{ width: "5vw" }}>: &nbsp;</td>
+                                            <td style={{ color: "#3a3a3a",width: "5vw" }}>: &nbsp;</td>
                                             <td style={{ color: "#3a3a3a", fontWeight: "500", width: "15vw" }}>{bookDetail.penerbit}</td>
                                         </tr>
                                         <tr>
                                             <td style={{ color: "#3a3a3a", }}>Tahun</td>
-                                            <td style={{ width: "5vw" }}>: &nbsp;</td>
+                                            <td style={{ color: "#3a3a3a",width: "5vw" }}>: &nbsp;</td>
                                             <td style={{ color: "#3a3a3a", fontWeight: "500", width: "15vw" }}>{bookDetail.tahun_terbit}</td>
                                         </tr>
                                         <tr>
                                             <td style={{ color: "#3a3a3a", }}>ISBN</td>
-                                            <td style={{ width: "5vw" }}>: &nbsp;</td>
+                                            <td style={{ color: "#3a3a3a",width: "5vw" }}>: &nbsp;</td>
                                             <td style={{ color: "#3a3a3a", fontWeight: "500", width: "15vw" }}>{bookDetail.isbn}</td>
                                         </tr>
                                         <tr>
                                             <td style={{ color: "#3a3a3a", }}>Genre</td>
-                                            <td style={{ width: "5vw" }}>: &nbsp;</td>
+                                            <td style={{ color: "#3a3a3a",width: "5vw" }}>: &nbsp;</td>
                                             <td style={{ color: "#3a3a3a", fontWeight: "500", width: "15vw" }}>{bookDetail.kategori.nama_kategori}</td>
                                         </tr>
                                     </table>
@@ -116,34 +116,34 @@ export const DetailBuku = () => {
                                     <table>
                                         <tr>
                                             <td style={{ color: "#3a3a3a", }}>Penulis</td>
-                                            <td style={{ width: "5vw" }}>:</td>
+                                            <td style={{ color: "#3a3a3a",width: "5vw" }}>: &nbsp;</td>
                                             <td style={{ color: "#3a3a3a", fontWeight: "500", width: "20vw" }}>{loadedData.pengarang}</td>
                                         </tr>
                                         <tr>
                                             <td style={{ color: "#3a3a3a", }}>Penerbit</td>
-                                            <td style={{ width: "5vw" }}>: &nbsp;</td>
+                                            <td style={{ color: "#3a3a3a",width: "5vw" }}>: &nbsp;</td>
                                             <td style={{ color: "#3a3a3a", fontWeight: "500", width: "20vw" }}>{loadedData.penerbit}</td>
                                         </tr>
                                         <tr>
                                             <td style={{ color: "#3a3a3a", }}>Tahun</td>
-                                            <td style={{ width: "5vw" }}>: &nbsp;</td>
+                                            <td style={{ color: "#3a3a3a",width: "5vw" }}>: &nbsp;</td>
                                             <td style={{ color: "#3a3a3a", fontWeight: "500", width: "20vw" }}>{loadedData.tahun_terbit}</td>
                                         </tr>
                                         <tr>
                                             <td style={{ color: "#3a3a3a", }}>ISBN</td>
-                                            <td style={{ width: "5vw" }}>: &nbsp;</td>
+                                            <td style={{ color: "#3a3a3a",width: "5vw" }}>: &nbsp;</td>
                                             <td style={{ color: "#3a3a3a", fontWeight: "500", width: "20vw" }}>{loadedData.isbn}</td>
                                         </tr>
                                         <tr>
                                             <td style={{ color: "#3a3a3a", }}>Genre</td>
-                                            <td style={{ width: "5vw" }}>: &nbsp;</td>
+                                            <td style={{ color: "#3a3a3a",width: "5vw" }}>: &nbsp;</td>
                                             <td style={{ color: "#3a3a3a", fontWeight: "500", width: "20vw" }}>{loadedData.kategori.nama_kategori}</td>
                                         </tr>
                                         {stok && <tr>
-                                            <td>Stok</td>
-                                            <td style={{ width: "5vw" }}>: &nbsp;</td>
+                                            <td style={{ color: "#3a3a3a", fontWeight: "500", width: "20vw" }}>Stok</td>
+                                            <td style={{ color: "#3a3a3a",width: "5vw" }}>: &nbsp;</td>
                                             <td style={{ color: "#3a3a3a", fontWeight: "500", width: "20vw" }}>{stok?.stok>0?stok.stok:"Kosong"}</td>
-                                            <td onClick={showHandler} style={{ color: "#3a3a3a", fontWeight: "500", width: "20vw" }}>Edit Stok</td>
+                                            <td onClick={showHandler} className={classes["detailbut"]} >Edit</td>
                                         </tr>}
                                         {
                                             !stok &&
@@ -154,7 +154,7 @@ export const DetailBuku = () => {
                                     </table>
                                     <div className={classes['batchbut1']}>
                                         <button onClick={backHandler} className={classes['delbut']}>Back</button>
-                                        <button onClick={editHandler} className={classes['savbut']} >Edit</button>
+                                        <button onClick={editHandler} className={classes['savbut']} >Save</button>
                                     </div>
                                 </div>
                             </div>
