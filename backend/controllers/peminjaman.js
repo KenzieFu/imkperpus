@@ -308,12 +308,14 @@ exports.createPeminjamanBarcode = async function (req, res, next) {
   // tanggal kembali dibuat otomatist 14 hari setelah tanggal pinjam
   try {
     // cek stok buku di tabel buku_perpus dengan id_buku
-    const buku = await Buku.findOne({where:{barcode:barcode}});
-    const bukuPerpus= await BukuPerpus.findByPk(buku.id_buku)
-    console.log(buku);
-    if (buku === null) {
+    const buku = await Buku.findOne({where:{isbn:barcode}});
+    if(buku==null)
+    {
       return res.status(501).json({ message: "Buku tidak ditemukan" });
-    } else if(bukuPerpus === null)
+    }
+    const bukuPerpus= await BukuPerpus.findByPk(buku.id_buku)
+  
+  if(bukuPerpus === null)
     {
       return res.status(501).json({message:"Buku Tidak Tersedia dalam perpus"})
     } else if (bukuPerpus.stok === 0) {
