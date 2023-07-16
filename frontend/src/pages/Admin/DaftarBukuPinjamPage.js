@@ -162,10 +162,10 @@ export const DaftarBukuPinjamPage = () => {
     <>
       <div className={classes["search-button"]}>
         <Input type="text" placeholder="Cari..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className={classes["searchbox"]} />
-        <Button onClick={() => setAdvanceSearch(!advanceSearch)} className={classes["action-filter"]}>
+        {/* <Button onClick={() => setAdvanceSearch(!advanceSearch)} className={classes["action-filter"]}>
           {" "}
           Filter <i class="fa fa-filter" aria-hidden="true"></i>
-        </Button>
+        </Button> */}
       </div>
       {advanceSearch && (
         <>
