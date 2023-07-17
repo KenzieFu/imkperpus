@@ -5,8 +5,10 @@ import { Fragment } from "react";
 import { Sidebar } from "../UI/Sidebar";
 import { useSelector } from "react-redux";
 
-import { Form, useSubmit } from "react-router-dom";
+
+import { Form, useNavigate, useSubmit } from "react-router-dom";
 import { toast } from "react-toastify";
+import useInput from "../hooks/use-input";
 
 const { useState } = React;
 
@@ -15,10 +17,23 @@ const Contact = (props) => {
 const isAuth = useSelector((state)=>state.auth.isAuth);
 const submit =useSubmit()
 const submitHandler=(e)=>{
-    submit(e.currentTarget,{method:"POST"})
+    e.preventDefault();
+    if(formValid)
+    {
+        submit(e.currentTarget,{method:"POST"})
 
     document.getElementById("formpesan").reset()
-    notify()
+    nameReset();
+    emailReset();
+    subjectReset();
+    messageReset();
+    phoneReset();
+    notify();
+    
+    }
+    else
+    gagal();
+    
 }
 const notify = () => toast.success('Message Uploaded', {
     position: "top-center",
@@ -42,6 +57,74 @@ const gagal = () => toast.warning('Sorry, there was a mistake.', {
     progress: undefined,
     theme: "colored",
 });
+const nameValidate=(value,errorHandler)=>{
+    if(value.trim() ==='')
+      {
+        errorHandler('*Name cannot be empty')
+       
+      }
+
+    return value.trim() !=='';
+  }
+const emailValidate=(value,errorHandler)=>{
+    if(value.trim() ==='')
+      {
+        errorHandler('*Email cannot be empty')
+       
+      }
+      else if(!value.trim().includes('@'))
+      {
+        errorHandler('*Email is Not Valid')
+      }
+
+    return value.trim() !=='' && value.includes('@');
+  }
+const phoneValidate=(value,errorHandler)=>{
+    let text=value.toString();
+    if(text ==='')
+      {
+        errorHandler('*Phone cannot be empty')
+       
+      }
+      else if(text.length <10 || text[0]!=='0' || text[1]!=='8')
+      {
+      
+        errorHandler('*Must be atleast 10 digits and starts with 08');
+      }
+     
+
+    return text.trim() !=='' && text.length>=10 && text[0]==='0' && text[1]==='8';
+  }
+
+  const subjectValidate=(value,errorHandler)=>{
+    if(value.trim() ==='')
+      {
+        errorHandler('*Subject cannot be empty')
+       
+      }
+
+    return value.trim() !=='';
+  }
+  const messageValidate=(value,errorHandler)=>{
+    if(value.trim() ==='')
+      {
+        errorHandler('*Message cannot be empty')
+       
+      }
+
+    return value.trim() !=='';
+  }
+  
+
+
+const {value:enteredName,valueIsValid:nameIsValid,hasError:nameHasError,valueChangeHandler:nameChangeHandler,inputBlurHandler:nameBlurHandler,errMsg:nameErrMsg,inputReset:nameReset}=useInput(nameValidate);
+const {value:enteredEmail,valueIsValid:emailIsValid,hasError:emailHasError,valueChangeHandler:emailChangeHandler,inputBlurHandler:emailBlurHandler,errMsg:emailErrMsg,inputReset:emailReset}=useInput(emailValidate);
+const {value:enteredPhone,valueIsValid:phoneIsValid,hasError:phoneHasError,valueChangeHandler:phoneChangeHandler,inputBlurHandler:phoneBlurHandler,errMsg:phoneErrMsg,inputReset:phoneReset}=useInput(phoneValidate);
+const {value:enteredSubject,valueIsValid:subjectIsValid,hasError:subjectHasError,valueChangeHandler:subjectChangeHandler,inputBlurHandler:subjectBlurHandler,errMsg:subjectErrMsg,inputReset:subjectReset}=useInput(subjectValidate);
+const {value:enteredMessage,valueIsValid:messageIsValid,hasError:messageHasError,valueChangeHandler:messageChangeHandler,inputBlurHandler:messageBlurHandler,errMsg:messageErrMsg,inputReset:messageReset}=useInput(messageValidate);
+
+let formValid=(nameIsValid && emailIsValid && phoneIsValid &&subjectIsValid && messageIsValid)??true;
+
     return (
         <Fragment>
 
@@ -55,26 +138,37 @@ const gagal = () => toast.warning('Sorry, there was a mistake.', {
                             </div>
                             <Form id="formpesan" method="POST">
                                 <div className={classes['content-input']}>
-                                    <label htmlFor='nama'>Full Name</label>
-                                    <input required name="nama" type="text" placeholder="Nama Lengkap"></input>
+                                    <label htmlFor='nama'>Full Name  <span style={{ padding:"0",color:"red",paddingLeft:"10px" }}>
+                                        {nameHasError && <span>{nameErrMsg}</span>}
+                                    </span></label>
+                                    <input onBlur={nameBlurHandler} onChange={event=>nameChangeHandler(event)} value={enteredName} name="nama" type="text" placeholder="Nama Lengkap"></input>
+                                   
                                 </div>             
                                 <div className={classes['content-input']}>
-                                    <label htmlFor='email'>Email</label>
-                                    <input pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required name="email" type="email" placeholder="nama@mail.com"></input>
+                                    <label htmlFor='email'>Email <span style={{ padding:"0",color:"red",paddingLeft:"10px" }}>
+                                        {emailHasError && <span>{emailErrMsg}</span>}
+                                    </span></label>
+                                    <input onBlur={emailBlurHandler} onChange={event=>emailChangeHandler(event)} value={enteredEmail} required name="email" type="email" placeholder="nama@mail.com"></input>
                                 </div>
                                 <div className={classes['content-input']}>
-                                    <label htmlFor='no_HP'>Phone Number</label>
-                                    <input required name="no_HP" type="number" placeholder="(08)-123456789"></input>
+                                    <label htmlFor='no_HP'>Phone Number <span style={{ padding:"0",color:"red",paddingLeft:"10px" }}>
+                                        {phoneHasError && <span>{phoneErrMsg}</span>}
+                                    </span></label>
+                                    <input onBlur={phoneBlurHandler} onChange={event=>phoneChangeHandler(event)} value={enteredPhone} required name="no_HP" type="number" placeholder="(08)-123456789"></input>
                                 </div>
                                 <div className={classes['content-input']}>
-                                    <label htmlFor='subject'>Subject</label>
-                                    <input required name="subjek" type="text" placeholder="Perihal"></input>
+                                    <label htmlFor='subject'>Subject <span style={{ padding:"0",color:"red",paddingLeft:"10px" }}>
+                                        {subjectHasError && <span>{subjectErrMsg}</span>}
+                                    </span></label>
+                                    <input  onBlur={subjectBlurHandler} onChange={event=>subjectChangeHandler(event)} value={enteredSubject} required name="subjek" type="text" placeholder="Perihal"></input>
                                 </div>
                                 <div className={classes['content-input']}>
-                                    <label htmlFor='pesan'>Message</label>
-                                    <textarea name="pesan" rows="7"></textarea>
+                                    <label htmlFor='pesan'>Message <span style={{ padding:"0",color:"red",paddingLeft:"10px" }}>
+                                        {messageHasError && <span>{messageErrMsg}</span>}
+                                    </span></label>
+                                    <textarea onBlur={messageBlurHandler} onChange={event=>messageChangeHandler(event)} value={enteredMessage} name="pesan" rows="7"></textarea>
                                 </div>
-                                <button type="submit" onClick={(e)=>submitHandler(e)} className={classes['kirimbutton']}>Upload message</button>
+                                <button disabled={!formValid } type="submit" onClick={(e)=>submitHandler(e)} className={classes['kirimbutton']}>Upload message</button>
                             </Form >
                         </div>
                         <div className={classes['maps']}>
@@ -100,48 +194,6 @@ const gagal = () => toast.warning('Sorry, there was a mistake.', {
 
 
 
-{/* 
-                    <div className={classes.card}>
-                        <div className={classes.grid}>
-                            <div className={classes.info}>
-                                <p>Lokasi Sekolah</p>
-                                <h1>SMP/SMA/SMK Swasta Methodist Charles Wesley Medan</h1>
-                                <p>Komplek CBD. Polonia Blok CC No.108</p>
-                                <p>Jl. Padang Golf (dalam)</p>
-                                <p>Medan – Sumatera Utara 20157, Indonesia</p>
-                                <div className={classes.grid_info}>
-                                    <div className={classes.grid_info}>
-                                        <div> Email</div>
-                                        <div>:info@methodistcw.sch.id
-                                        </div>
-                                        <div></div>
-                                        <div>:methodistcw@gmail.com
-                                        </div>
-                                    </div>
-                                    <div className={classes.grid_info}>
-                                        <div> Phone</div>
-                                        <div>:(061) – 4277 1542</div>
-                                    </div> 
-                                    <div className={classes.grid_info}>
-                                        <div> Website</div>
-                                        <div>
-                                            <a href="https://methodistcw.sch.i">:https://methodistcw.sch.i</a>
-                                        </div>
-                                    </div>
-                                    <div className={classes.grid_info}>
-                                        <div> Fast Response</div>
-                                        <div>:0878 6912 3707 (WA)
-                                        </div>
-                                        <div></div>
-                                        <div>:0813 7724 1686</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className={classes.kepsek}>
-                                <img src="../assets/kepsek.png"/>
-                            </div>
-                        </div>
-                    </div> */}
 
         </Fragment>
     )
